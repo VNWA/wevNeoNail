@@ -1,0 +1,266 @@
+/* Basic CSS */
+* {
+  font-family: 'Lora';
+  font-size: 16px;
+}
+
+.header {
+  max-height: 195px;
+
+  width: 100%;
+  /* Đảm bảo header chiếm toàn bộ chiều ngang của trang */
+  z-index: 1000;
+  /* Đảm bảo header luôn nằm trên các phần tử khác */
+  background-color: white;
+  /* Màu nền header để không bị trong suốt */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  /* Thêm bóng để header nổi bật */
+}
+
+a {
+  cursor: pointer;
+}
+
+/* Điều chỉnh phần nội dung để không bị header che mất */
+
+
+
+.nav-top ul li span {
+  position: relative;
+}
+
+.nav-top ul li .under-line::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  /* Bắt đầu với đường kẻ rộng bằng 0 */
+  height: 2px;
+  /* Độ dày của đường kẻ */
+  bottom: 0;
+  left: 0;
+  top: 100%;
+  background-color: #feb2be;
+  /* Màu của đường kẻ */
+  transition: width 0.3s ease;
+  /* Thời gian và hiệu ứng của animation */
+}
+
+.nav-top ul li .under-line:hover::after {
+  width: 100%;
+  /* Khi hover, đường kẻ sẽ mở rộng toàn bộ */
+}
+
+.nav-top ul li .under-line {
+  font-size: 30;
+  display: inline-block;
+  /* Đảm bảo phần tử chiếm chiều rộng nội dung */
+  cursor: pointer;
+  font-size: 1.25rem;
+  text-transform: uppercase;
+}
+
+
+
+/*----------------hover navbar-------------- */
+/* Dropdown menu */
+.nav-dropdown {
+  display: none;
+  position: absolute;
+  /* Đặt thành fixed để căn cứ vào viewport */
+  left: 0;
+  width: 100vw;
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  top: 101%;
+  border-top: 1px solid #dcdcdc;
+  /* Chiều rộng toàn bộ màn hình */
+  background-color: #fff;
+  list-style: none;
+  /* Khoảng cách bên trong menu */
+  box-sizing: border-box;
+  /* Đảm bảo padding không làm tăng chiều rộng */
+  z-index: 999;
+  /* Đặt menu dropdown nổi lên trên */
+}
+
+/* Hiển thị dropdown khi hover */
+.nav-top li:hover .nav-dropdown {
+  display: block;
+  /* Hiển thị danh sách con khi hover */
+}
+
+
+
+/* Thêm hiệu ứng chuyển đổi */
+.nav-dropdown {
+  transition: all 0.3s ease;
+}
+
+
+/*----------------hover navbar-------------- */
+.custom-underline {
+  position: relative;
+  display: inline-block;
+  font-family: Lato;
+  font-weight: 200;
+  font-size: 38px;
+}
+
+.custom-underline::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 8px;
+  /* Khoảng cách giữa chữ và gạch chân */
+  height: 1px;
+  /* Độ dày của gạch chân */
+  background-color: black;
+  /* Màu của gạch chân */
+}
+
+.search-menu_desktop {
+  display: none;
+}
+
+.search-menu_desktop.active {
+  display: block;
+}
+.menu-cart{
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 20vw;
+  height: 100vh;
+  background-color: #fff;
+  transform: translateX(-0);
+  transition: transform 0.4s ease-in-out;
+  z-index: 40;
+}
+.menu-cart.active{
+  transform: translateX(100%);
+}
+@media screen and (max-width: 768px) {
+  * {
+    font-size: 12px;
+  }
+
+  .container {
+    padding-right: 10px;
+    padding-left: 10px;
+    margin-right: auto !important;
+    margin-left: auto !important;
+    max-width: 1700px;
+  }
+
+  /* Định nghĩa cho menu khi ở trạng thái ẩn */
+  .search-menu {
+    display: none;
+  }
+
+  .search-menu.active {
+    display: block;
+  }
+
+  .nav-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    /* Menu chiếm 70% chiều rộng màn hình */
+    height: 100%;
+    background-color: #fff;
+    transform: translateX(-100%);
+    /* Ẩn menu hoàn toàn khỏi màn hình bên trái */
+    transition: transform 0.4s ease-in-out;
+    /* Hiệu ứng chuyển động mượt mà */
+    z-index: 49;
+  }
+  /* Khi menu được kích hoạt (hiển thị) */
+  .nav-menu.active {
+    transform: translateX(0);
+    /* Đẩy menu vào màn hình */
+  }
+
+  /* Căn chỉnh danh sách menu */
+  .nav-menu ul {
+    list-style-type: none;
+  }
+
+  .nav-menu ul li {
+    margin: 5px 0;
+  }
+
+  .nav-menu ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    transition: color 0.3s;
+  }
+  /* Hamburger Menu Icon Styles */
+  .menu-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 25px;
+    cursor: pointer;
+    position: relative;
+    margin: 0 15px;
+  }
+  .menu-cart{
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #fff;
+    transform: translateX(-0);
+    transition: transform 0.4s ease-in-out;
+    z-index: 40;
+  }
+  .menu-cart.active{
+    transform: translateX(100%);
+  }
+  .menu-icon .bar {
+    width: 100%;
+    height: 4px;
+    background-color: #333;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+  }
+
+  /* When the icon is clicked (active state) */
+  .menu-icon.active .bar:nth-child(1) {
+    transform: rotate(50deg) translate(8.1px, 8.1px);
+  }
+
+  .menu-icon.active .bar:nth-child(2) {
+    opacity: 0;
+    /* Hide the middle bar */
+  }
+
+  .menu-icon.active .bar:nth-child(3) {
+    transform: rotate(-50deg) translate(7px, -7px);
+  }
+
+  .custom-underline {
+    position: relative;
+    display: inline-block;
+    font-family: Lato;
+    font-weight: 200;
+    font-size: 20px;
+  }
+
+  .custom-underline::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0px;
+    /* Khoảng cách giữa chữ và gạch chân */
+    height: 1px;
+    /* Độ dày của gạch chân */
+    background-color: black;
+    /* Màu của gạch chân */
+  }
+}
