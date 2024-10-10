@@ -14,9 +14,7 @@ export default {
       },
       padding: {
         padding: 'padding: 3px 0 3px 10px'
-      }
-
-
+      },
     },
   },
   plugins: [],

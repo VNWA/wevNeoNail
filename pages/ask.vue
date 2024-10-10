@@ -6,127 +6,72 @@
     <div class="text-3xl text-center">
       Aquí encontrarás respuestas a las preguntas más frecuentes
     </div>
-    <div class="mt-8">
-      <div class="bg-primary uppercase text-2xl text-center py-3 font-semibold mx-auto max-w-5xl">
-        Productos
+    <div class="mt-8 flex items-center justify-center">
+      <div class="relative w-80 ">
+        <input type="text" placeholder="Tìm kiếm..."
+          class="border focus:outline-none w-full py-3 pl-4 pr-10 text-base" />
+        <div class="absolute inset-y-0 right-0 flex items-center pr-3 pb-3 mt-3">
+          <Icon name="ph:magnifying-glass" class="w-6 h-6" />
+        </div>
       </div>
     </div>
-    <div class="grid grid-cols-2">
-      <div class="col-span-1">
-        <ul class="mt-5 ml-5">
-      <li v-for="(item, index) in menuItems" :key="index" class="pb-2 cursor-pointer w-1/2">
-        <div @click.prevent="toggleMenu(index)" :class="{
-          'text-black': selectedMenu !== index
-        }"
-          class="flex items-center justify-between bg-rose-200 uppercase text-2xl p-3 font-semibold mx-auto max-w-5xl">
-          <NuxtLink class="block py-2 text-2xl transition duration-300 ease-in- w-full text-center ">
-            {{ item.name }}
-          </NuxtLink>
-          <!-- Menu con hiển thị khi click -->
-          <div class="mr-5">
-            <Icon class="text-3xl" name="ph:caret-down" />
+    <div class="max-w-6xl mx-auto">
+      <ul class="grid lg:grid-cols-2 mt-8 ml-5 gap-6">
+        <li v-for="(item, index) in menuItems" :key="index" class="pb-2 border-b">
+          <div class="flex items-center justify-between">
+            <NuxtLink to="/" class="block py-2 text-2xl transition duration-300 ease-in-out ">
+              {{ item.name }}
+            </NuxtLink>
+            <!-- Menu con hiển thị khi click -->
+            <div class="mr-5" @click.prevent="toggleMenu(index)" :class="{
+              'text-gray-400': selectedMenu !== index
+            }">
+              <Icon class="text-3xl" name="ph:caret-down" />
+            </div>
           </div>
-        </div>
-        <div v-if="selectedMenu === index" class="">
-          <ul class="p-0">
-            <li v-for="(subItem, subIndex) in item.submenu" :key="subIndex"
-              class="text-sm text-gray-600 hover:text-gray-800 transition duration-200">
-              {{ subItem }}
-            </li>
-          </ul>
-        </div>
-      </li>
-    </ul>
-      </div>
-      <div class="col-span-1">
-        <ul class="mt-5 ml-5">
-      <li v-for="(item, index) in menuItems" :key="index" class="pb-2 cursor-pointer w-1/2">
-        <div @click.prevent="toggleMenu(index)" :class="{
-          'text-black': selectedMenu !== index
-        }"
-          class="flex items-center justify-between bg-rose-200 uppercase text-2xl p-3 font-semibold mx-auto max-w-5xl">
-          <NuxtLink class="block py-2 text-2xl transition duration-300 ease-in- w-full text-center ">
-            {{ item.name }}
-          </NuxtLink>
-          <!-- Menu con hiển thị khi click -->
-          <div class="mr-5">
-            <Icon class="text-3xl" name="ph:caret-down" />
-          </div>
-        </div>
-        <div v-if="selectedMenu === index" class="">
-          <ul class="p-0">
-            <li v-for="(subItem, subIndex) in item.submenu" :key="subIndex"
-              class="text-sm text-gray-600 hover:text-gray-800 transition duration-200">
-              {{ subItem }}
-            </li>
-          </ul>
-        </div>
-      </li>
-    </ul>
-      </div>
+          
+        </li>
+      </ul>
     </div>
-    <ul class="mt-5 ml-5">
-      <li v-for="(item, index) in menuItems" :key="index" class="pb-2 cursor-pointer w-1/2">
-        <div @click.prevent="toggleMenu(index)" :class="{
-          'text-black': selectedMenu !== index
-        }"
-          class="flex items-center justify-between bg-rose-200 uppercase text-2xl p-3 font-semibold mx-auto max-w-5xl">
-          <NuxtLink class="block py-2 text-2xl transition duration-300 ease-in- w-full text-center ">
-            {{ item.name }}
-          </NuxtLink>
-          <!-- Menu con hiển thị khi click -->
-          <div class="mr-5">
-            <Icon class="text-3xl" name="ph:caret-down" />
-          </div>
-        </div>
-        <div v-if="selectedMenu === index" class="">
-          <ul class="p-0">
-            <li v-for="(subItem, subIndex) in item.submenu" :key="subIndex"
-              class="text-sm text-gray-600 hover:text-gray-800 transition duration-200">
-              {{ subItem }}
-            </li>
-          </ul>
-        </div>
-      </li>
-    </ul>
+
+
+
   </div>
 </template>
 
-<script lang="ts" setup>
-interface MenuItem {
-  name: string;
-  submenu: string[];
-}
+<script setup>
 
-const toggleMenu = (index: number) => {
+
+const toggleMenu = (index) => {
   selectedMenu.value = selectedMenu.value === index ? null : index
 }
-const selectedMenu = ref<number | null>(null)
-const menuItems: MenuItem[] = [
+const selectedMenu = ref(null)
+const menuItems = [
   {
-    name: 'Home',
-    submenu: ['Submenu 1', 'Submenu 2', 'Submenu 3']
+    'name': 'child1',
+    'desc': 'noidung'
   },
   {
-    name: 'Nail Polishes',
-    submenu: ['Nail Color 1', 'Nail Color 2', 'Nail Color 3']
+    'name': 'child2',
+    'desc': 'noidung'
   },
   {
-    name: 'Manicure',
-    submenu: ['Manicure 1', 'Manicure 2']
+    'name': 'child3',
+    'desc': 'noidung'
   },
   {
-    name: 'Kits',
-    submenu: ['Kit 1', 'Kit 2', 'Kit 3']
+    'name': 'child4',
+    'desc': 'noidung'
   },
   {
-    name: 'Outlet',
-    submenu: ['Outlet 1', 'Outlet 2']
+    'name': 'child5',
+    'desc': 'noidung'
   },
   {
-    name: 'Learn With Us',
-    submenu: ['Lesson 1', 'Lesson 2']
-  }
+    'name': 'child6',
+    'desc': 'noidung'
+  },
+
 ]
 </script>
 
