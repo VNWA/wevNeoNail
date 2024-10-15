@@ -1,17 +1,23 @@
 <template>
   <main>
     <div class="container mx-auto">
+      <!-- Desktop Banner -->
       <div class="w-full hidden lg:block">
-        <NuxtLink class="flex justify-center items-center" to="/products">
-          <NuxtImg width="100%" class="cursor-pointer mb-2" src="/images/fotob-719.webp" />
+        <NuxtLink to="/products" class="flex justify-center items-center">
+          <NuxtImg alt="Banner chính - Desktop" width="1600" height="480" class="cursor-pointer mb-2"
+            src="/images/fotob-719.webp" />
         </NuxtLink>
       </div>
+      
+      <!-- Mobile Banner -->
       <div class="lg:hidden mt-1">
         <NuxtLink to="/products">
-          <NuxtImg width="410" height="270" class="cursor-pointer mb-2 w-full h-full object-cover" src="/images/fotos-text-719.webp" />
+          <NuxtImg alt="Banner chính - Mobile" width="410" height="270"
+            class="cursor-pointer mb-2 w-full h-full object-cover" src="/images/fotos-text-719.webp" />
         </NuxtLink>
       </div>
 
+      <!-- Product Slider -->
       <div class="">
         <Swiper :modules="[SwiperEffectCreative, SwiperPagination]" :spaceBetween="5" :breakpoints="{
           '640': {
@@ -28,27 +34,34 @@
           },
         }">
           <SwiperSlide>
-            <NuxtLink class="w-full h-full" to="/">
-              <NuxtImg class="w-full h-auto object-cover " width="526" height="175" src="/images/fotos-709.webp" />
+            <NuxtLink class="w-full h-full" to="/products">
+              <NuxtImg alt="Hình ảnh sản phẩm 1" class="w-full h-auto object-cover" width="526" height="175"
+                src="/images/fotos-725.webp" />
             </NuxtLink>
           </SwiperSlide>
           <SwiperSlide>
-            <NuxtLink class="w-full h-full" to="/">
-              <NuxtImg width="526" height="175" src="/images/fotos-709.webp" />
+            <NuxtLink class="w-full h-full" to="/products">
+              <NuxtImg alt="Hình ảnh sản phẩm 2" class="w-full h-auto object-cover" width="526" height="175"
+                src="/images/fotos-726.webp" />
             </NuxtLink>
           </SwiperSlide>
           <SwiperSlide>
-            <NuxtLink class="w-full h-full" to="/">
-              <NuxtImg class="mr-0" width="526" height="175" src="/images/fotos-709.webp" />
+            <NuxtLink class="w-full h-full" to="/products">
+              <NuxtImg alt="Hình ảnh sản phẩm 3" class="w-full h-auto object-cover" width="526" height="175"
+                src="/images/fotos-727.webp" />
             </NuxtLink>
           </SwiperSlide>
         </Swiper>
       </div>
+
+      <!-- Category List -->
       <div class="grid lg:grid-cols-6 grid-cols-3 lg:gap-5 gap-2 py-5 ">
-        <div v-for="(item, index) in CateList " :key="index">
+        <div v-for="(item, index) in CateList" :key="index">
           <HomeCateItem :name="item.name" :image="item.image" />
         </div>
       </div>
+
+      <!-- Desktop Specific Content -->
       <div class="hidden lg:grid grid-cols-2 my-6">
         <div>
           <div class="custom-underline">
@@ -60,70 +73,82 @@
           <HomeSlideOne :data="SliderList" />
         </div>
         <div>
-          <NuxtLink to="/">
-            <NuxtImg width="800" height="450" src="images/23.webp" />
+          <NuxtLink to="/products">
+            <NuxtImg alt="Hình ảnh sản phẩm chủ đạo" width="800" height="450" src="images/23.webp" />
           </NuxtLink>
         </div>
       </div>
+      <div class="lg:hidden grid grid-cols-1">
+        <HomeSlideOne :data="SliderList" />
+      </div>
+      
+
+      <!-- Additional Components -->
       <HomeAboutProducts />
       <HomeSlideTwo :data="SliderList2" />
       <HomeCommit />
-      <div class="custom-underline mt-4 ">
+
+      <!-- Instagram Section -->
+      <div class="custom-underline mt-4">
         Follow @neonailespana on the Instagram Community
       </div>
       <div class="flex mt-3 mb-5">
         <NuxtLink class="mx-1" to="/">
           <div
-            class="w-10 h-10 cursor-pointer border border-black bg-white text-black rounded-full flex justify-center items-center text-lg	 font-bold hover:bg-black hover:text-white transition-colors duration-300">
+            class="w-10 h-10 cursor-pointer border border-black bg-white text-black rounded-full flex justify-center items-center text-lg font-bold hover:bg-black hover:text-white transition-colors duration-300">
             <Icon name="bi:instagram"></Icon>
           </div>
         </NuxtLink>
         <NuxtLink class="mx-1" to="/">
           <div
-            class="w-10 h-10 cursor-pointer border border-black bg-white text-black rounded-full flex justify-center items-center text-lg	 font-bold hover:bg-black hover:text-white transition-colors duration-300">
+            class="w-10 h-10 cursor-pointer border border-black bg-white text-black rounded-full flex justify-center items-center text-lg font-bold hover:bg-black hover:text-white transition-colors duration-300">
             <Icon name="bi:instagram"></Icon>
           </div>
         </NuxtLink>
         <NuxtLink class="mx-1" to="/">
           <div
-            class="w-10 h-10 cursor-pointer border border-black bg-white text-black rounded-full flex justify-center items-center text-lg	 font-bold hover:bg-black hover:text-white transition-colors duration-300">
+            class="w-10 h-10 cursor-pointer border border-black bg-white text-black rounded-full flex justify-center items-center text-lg font-bold hover:bg-black hover:text-white transition-colors duration-300">
             <Icon name="bi:instagram"></Icon>
           </div>
         </NuxtLink>
         <NuxtLink class="mx-1" to="/">
           <div
-            class="w-10 h-10 cursor-pointer border border-black bg-white text-black rounded-full flex justify-center items-center text-lg	 font-bold hover:bg-black hover:text-white transition-colors duration-300">
+            class="w-10 h-10 cursor-pointer border border-black bg-white text-black rounded-full flex justify-center items-center text-lg font-bold hover:bg-black hover:text-white transition-colors duration-300">
             <Icon name="bi:instagram"></Icon>
           </div>
         </NuxtLink>
-
       </div>
+
+      <!-- Product Picture Slider -->
       <div>
         <Swiper :style="{
           '--swiper-navigation-color': 'black',
           '--swiper-pagination-color': 'black',
         }" :modules="[SwiperAutoplay, SwiperEffectCreative, SwiperPagination, SwiperNavigation]" :slides-per-view="2"
           :autoplay="true" :loop="true" :breakpoints="{
-            640: {  // Từ 640px trở xuống (màn hình di động)
-              slidesPerView: 2,  // Hiển thị 2 cột
-              navigation: false  // Ẩn nút điều hướng
+            640: {  
+              slidesPerView: 2,  
+              navigation: false  
             },
-            1024: {  // Từ 1024px trở lên
-              slidesPerView: 5,  // Hiển thị 5 cột
-              navigation: true   // Hiện nút điều hướng
+            1024: {  
+              slidesPerView: 5,  
+              navigation: true   
             }
           }">
-          <SwiperSlide v-for="(item, index) in ProductPicture " :key="index">
+          <SwiperSlide v-for="(item, index) in ProductPicture" :key="index">
             <HomeProductPicture :image="item.image" />
           </SwiperSlide>
         </Swiper>
-
       </div>
+
+      <!-- Meta Information -->
       <title></title>
       <meta name="title" content="">
     </div>
   </main>
 </template>
+
+
 
 <script lang="ts" setup>
 // Import Swiper Vue.js components
@@ -201,38 +226,39 @@ const SliderList = [
 const SliderList2 = [
   {
     name: 'Essential and Premium',
-    image: 'images/16.webp',
-    price: '69$'
+    image: 'images/01.webp',
+    price: '69$',
+    discount: '90$',
   },
   {
     name: 'Advanced Care',
-    image: 'images/17.webp',
-    price: '69$'
-
+    image: 'images/02.webp',
+    price: '59$',
+    discount: '88$',
   },
   {
-    name: 'Nail Strengthener',
-    image: 'images/18.webp',
-    price: '69$'
-
+    name: 'Essential and Premium',
+    image: 'images/01.webp',
+    price: '69$',
+    discount: '90$',
   },
   {
-    name: 'UV Protection',
-    image: 'images/19.webp',
-    price: '69$'
-
+    name: 'Advanced Care',
+    image: 'images/02.webp',
+    price: '59$',
+    discount: '88$',
   },
   {
-    name: 'Moisturizing Base',
-    image: 'images/20.webp',
-    price: '69$'
-
+    name: 'Essential and Premium',
+    image: 'images/01.webp',
+    price: '69$',
+    discount: '90$',
   },
   {
-    name: 'Gel Finish',
-    image: 'images/21.webp',
-    price: '69$'
-
+    name: 'Advanced Care',
+    image: 'images/02.webp',
+    price: '59$',
+    discount: '88$',
   },
 ]
 

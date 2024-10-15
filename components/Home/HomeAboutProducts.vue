@@ -26,7 +26,7 @@
                             </button>
                         </div>
                         <div class="col-span-1 lg:px-3 flex justify-center items-center">
-                            <NuxtImg src="/images/24.webp" />
+                            <NuxtImg alt="image" width="150" height="320" src="/images/24.webp" />
                         </div>
                         <div class="hidden col-span-2 lg:block">
                             <ul class="list-disc text-left ml-7">
@@ -51,7 +51,7 @@
                             </ul>
                         </div>
                         <div class="col-span-1 lg:px-3 flex justify-center items-center">
-                            <NuxtImg src="/images/25.webp" />
+                            <NuxtImg alt="image" width="150" height="320" src="/images/25.webp" />
                         </div>
                         <div class="lg:col-span-2 col-span-1">
                             <div

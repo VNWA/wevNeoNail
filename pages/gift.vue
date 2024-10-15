@@ -8,7 +8,7 @@
       <div class="grid lg:grid-cols-12 pb-8">
         <div class="lg:col-span-3">
           <div class="bg-white rounded-l-md rounded-b-md" style="height: 26rem;">
-            <NuxtImg width="375" height="375" class="pt-5" src="/images/02.jpg" />
+            <NuxtImg alt="product" width="375" height="375" class="pt-5" src="/images/02.jpg" />
           </div>
         </div>
         <div class="lg:col-span-6">
@@ -29,7 +29,7 @@
           </div>
           <div class="lg:col-span-3 order-1 lg:hidden flex-col justify-end flex mt-14">
           <div class="bg-white rounded-l-md rounded-b-md" style="height: 26rem;">
-            <NuxtImg width="375" height="375" class="pt-5" src="/images/02.jpg" />
+            <NuxtImg alt="product" width="375" height="375" class="pt-5" src="/images/02.jpg" />
           </div>
         </div>
           <div class="h-80 bg-white rounded-l-md lg:mt-7 lg:ml-7">
@@ -51,7 +51,7 @@
         </div>
         <div class="lg:col-span-3 order-1 lg:flex flex-col justify-end hidden">
           <div class="bg-white rounded-l-md rounded-b-md" style="height: 26rem;">
-            <NuxtImg width="375" height="375" class="pt-5" src="/images/02.jpg" />
+            <NuxtImg alt="product" width="375" height="375" class="pt-5" src="/images/02.jpg" />
           </div>
         </div>
       </div>

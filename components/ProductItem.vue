@@ -14,17 +14,19 @@
         <div class="content relative">
             <div class=" block group-hover:hidden">
                 <NuxtLink to="/p/teo-dep-trai">
-                    <NuxtImg :src="dataPro.image[0]" class="w-full h-full object-cover default-image"
-                        v-if="dataPro.image.length > 0" />
+                    <div class="flex items-center justify-center">
+                        <NuxtImg alt="product" :src="dataPro.image[0]" class="default-image"
+                            v-if="dataPro.image.length > 0" width="200" height="200" />
+                    </div>
                     <p class="text-center text-sm ">{{ dataPro.title }}</p> <!-- Tên sản phẩm -->
 
                     <!-- Giá cũ, chỉ hiển thị nếu có giá mới, và ẩn khi hover -->
                     <div class="text-xl text-gray-500 line-through text-center " v-if="dataPro.price_new">
-                        {{ dataPro.price }}
+                        {{ dataPro.price }}$
                     </div>
                     <!-- Giá mới, chỉ hiển thị nếu có giá mới, và ẩn khi hover -->
                     <div class="text-2xl text-center font-bold " v-if="dataPro.price_new">
-                        {{ dataPro.price_new }}
+                        {{ dataPro.price_new }}$
                     </div>
                     <!-- Nút hiển thị giảm giá, sẽ bị ẩn khi hover -->
                     <div class="text-center ">
@@ -40,7 +42,6 @@
                             </div>
                         </button>
                     </div>
-
                 </NuxtLink>
             </div>
             <div class="  w-full h-full hidden group-hover:block ">
@@ -52,11 +53,11 @@
                     :slides-per-view="1" :autoplay="true" :loop="true" :navigation="true" effect="fade">
                     <!-- Lướt qua các ảnh trong mảng (bắt đầu từ phần tử thứ 2 để khác ảnh mặc định) -->
                     <SwiperSlide v-for="(image, index) in dataPro.image.slice(1)" :key="index">
-                        <NuxtLink  to="/p/teo-dep-trai">
+                        <NuxtLink to="/p/teo-dep-trai">
                             <div class="relative">
                                 <div class="absolute top-0 left-0 w-full h-full z-10"></div>
                                 <NuxtPicture :src="image"
-                                    :imgAttrs="{ width: '280', height: '140', class: 'w-auto h-36 max-h-36 object-cover' }" />
+                                    :imgAttrs="{ width: '200', height: '200', class: 'w-auto h-36 max-h-36 object-cover' }" />
                             </div>
                         </NuxtLink>
                     </SwiperSlide>

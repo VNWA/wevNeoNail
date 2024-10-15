@@ -8,7 +8,7 @@
       <div class="flex overflow-x-auto space-x-4 lg:grid lg:grid-cols-3 lg:space-x-0">
         <div class="text-center p-8 flex-shrink-0  w-full">
           <div class="flex items-center justify-center mb-3">
-            <NuxtImg width="100" height="120" src="/images/26.webp" />
+            <NuxtImg alt="image" width="100" height="120" src="/images/26.webp" />
           </div>
           <div class="text-xl font-bold">Certified Products</div>
           <p>
@@ -18,7 +18,7 @@
         </div>
         <div class="text-center p-8 flex-shrink-0 w-full">
           <div class="flex items-center justify-center mb-3">
-            <NuxtImg width="100" height="120" src="/images/26.webp" />
+            <NuxtImg alt="image" width="100" height="120" src="/images/26.webp" />
           </div>
           <div class="text-xl font-bold">Certified Products</div>
           <p>
@@ -28,7 +28,7 @@
         </div>
         <div class="text-center p-8 flex-shrink-0 w-full">
           <div class="flex items-center justify-center mb-3">
-            <NuxtImg width="100" height="120" src="/images/26.webp" />
+            <NuxtImg alt="image" width="100" height="120" src="/images/26.webp" />
           </div>
           <div class="text-xl font-bold">Certified Products</div>
           <p>

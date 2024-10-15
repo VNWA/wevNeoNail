@@ -17,10 +17,10 @@
           </div>
         </div>
         <div class="text-right">
-          <NuxtLink to="/" class=" uppercase hover:opacity-75">
+          <NuxtLink to="/ask" class=" uppercase hover:opacity-75">
             Questions & Answers
           </NuxtLink>
-          <NuxtLink to="/" class="ml-16 uppercase hover:opacity-75">
+          <NuxtLink to="/gift" class="ml-16 uppercase hover:opacity-75">
             Gift ideas
           </NuxtLink>
         </div>
@@ -32,8 +32,8 @@
         <div class="grid grid-cols-2 py-4 text-center container lg:mx-auto justify-center items-center">
           <!-- Logo Section -->
           <div class=" flex justify-center items-center w-full lg:w-3/4">
-            <NuxtLink to="/ ">
-              <NuxtImg width="260px" height="64px" class="bg-black" src="/images/logo.webp" />
+            <NuxtLink to="/">
+              <NuxtImg alt="logo" width="260px" height="64px" class="bg-black" src="/images/logo.webp" />
             </NuxtLink>
           </div>
           <!-- Search Input and Icons Section -->
@@ -47,10 +47,10 @@
               </div>
               <div :class="{ 'search-menu_desktop': true, 'active': isSearchOpen }"
                 class="absolute w-full h-auto bg-white top-8 z-50 border search-menu_desktop">
-                <NuxtLink to="/">
+                <NuxtLink to="/p/a">
                   <div class="grid grid-cols-10 border-b">
                     <div class="col-span-2 flex items-center justify-center px-2 ">
-                      <NuxtImg width="80" height="80" src="/images/22.webp" />
+                      <NuxtImg alt="product" width="80" height="80" src="/images/22.webp" />
                     </div>
                     <div class="col-span-8 flex flex-col justify-center items-start">
                       <div class="text-sm">ADORABLE Starter Set</div>
@@ -68,16 +68,16 @@
             </div>
             <div class="lg:flex items-center space-x-6 lg:ml-5 ml-20 hidden">
               <Icon name="ph:user-light" class="hover:opacity-70 w-6 h-6 cursor-pointer" />
-              <div class="relative">
+              <NuxtLink class="relative" to="/favourite">
                 <Icon class="hover:opacity-70 w-7 h-7 cursor-pointer hidden lg:block "
                   name="material-symbols-light:favorite-outline" />
                 <span
                   class="w-4 h-4 flex items-center justify-center rounded-full bg-black text-white absolute -top-1 -right-1 text-xs">0</span>
-              </div>
-              <div class="relative">
-                <NuxtLink @click="isCartOpen = !isCartOpen" to="/">
+              </NuxtLink>
+              <div @click="isCartOpen = !isCartOpen" class="relative cursor-pointer">
+                <div>
                   <Icon name="ph:handbag-simple-light" class="hover:opacity-70 w-6 h-6 flex" />
-                </NuxtLink>
+                </div>
                 <span
                   class="w-4 h-4 flex items-center justify-center rounded-full bg-black text-white absolute -top-1 -right-1 text-xs">0</span>
               </div>
@@ -92,7 +92,7 @@
               <li class="mx-12 py-2 my-2 text-white px-4 flex justify-center items-center "
                 style="background-color: #640202;">Autumn Colors</li>
               <li class="mx-12 py-4 font-medium"> <span class="pb-4">
-                  <NuxtLink to="/" class="under-line">Nail Polishes</NuxtLink>
+                  <NuxtLink to="/products" class="under-line">Nail Polishes</NuxtLink>
                 </span>
                 <div class="nav-dropdown absolute bg-white ">
                   <div class="container mx-auto py-5">
@@ -113,7 +113,7 @@
                 </div>
               </li>
               <li class="mx-12 py-4 font-medium"> <span class="pb-4">
-                  <NuxtLink to="/" class="under-line">Manicure</NuxtLink>
+                  <NuxtLink to="/products" class="under-line">Manicure</NuxtLink>
                 </span>
                 <div class="nav-dropdown absolute  bg-white ">
                   <div class="container mx-auto py-5">
@@ -136,7 +136,7 @@
                 </div>
               </li>
               <li class="mx-12 py-4 font-medium"> <span class="pb-4">
-                  <NuxtLink to="/" class="under-line">Kits</NuxtLink>
+                  <NuxtLink to="/products" class="under-line">Kits</NuxtLink>
                 </span>
                 <div class="nav-dropdown absolute  bg-white ">
                   <div class="container mx-auto py-5">
@@ -157,7 +157,7 @@
                 </div>
               </li>
               <li class="mx-12 py-4 font-medium"> <span class="pb-4">
-                  <NuxtLink to="/" class="under-line">Outlet
+                  <NuxtLink to="/products" class="under-line">Outlet
                   </NuxtLink>
                 </span>
                 <div class="nav-dropdown absolute  bg-white ">
@@ -179,7 +179,7 @@
                 </div>
               </li>
               <li class="mx-12 py-4 font-medium"> <span class="pb-4">
-                  <NuxtLink to="/" class="under-line">APRENDE CON NOSOTROS</NuxtLink>
+                  <NuxtLink to="/about" class="under-line">APRENDE CON NOSOTROS</NuxtLink>
                 </span>
                 <div class="nav-dropdown absolute  bg-white ">
                   <div class="container mx-auto py-5">
@@ -222,7 +222,7 @@
       <div class="p-5 pt-0">
         <div class="flex border-b py-5 w-full">
           <div class="lg:mr-2 mr-6">
-            <NuxtImg src="/images/0001.webp" width="64" height="96" />
+            <NuxtImg alt="product" src="/images/0001.webp" width="64" height="96" />
           </div>
           <div>
             <div class="font-light text-gray-800 inline-block lg:text-base text-2xl">
@@ -252,7 +252,7 @@
         </div>
         <div class="flex border-b py-5 w-full">
           <div class="lg:mr-2 mr-6">
-            <NuxtImg src="/images/0001.webp" width="64" height="96" />
+            <NuxtImg alt="product" src="/images/0001.webp" width="64" height="96" />
           </div>
           <div>
             <div class="font-light text-gray-800 inline-block lg:text-base text-2xl">
@@ -282,7 +282,7 @@
         </div>
         <div class="flex border-b py-5 w-full">
           <div class="lg:mr-2 mr-6">
-            <NuxtImg src="/images/0001.webp" width="64" height="96" />
+            <NuxtImg alt="product" src="/images/0001.webp" width="64" height="96" />
           </div>
           <div>
             <div class="font-light text-gray-800 inline-block lg:text-base text-2xl">
@@ -312,7 +312,7 @@
         </div>
         <div class="flex border-b py-5 w-full">
           <div class="lg:mr-2 mr-6">
-            <NuxtImg src="/images/0001.webp" width="64" height="96" />
+            <NuxtImg alt="product" src="/images/0001.webp" width="64" height="96" />
           </div>
           <div>
             <div class="font-light text-gray-800 inline-block lg:text-base text-2xl">
@@ -344,9 +344,9 @@
           Tổng cộng: <b class="lg:text-2xl text-3xl ">6999$</b>
         </div>
         <div>
-          <button
-            class="w-full py-3 text-white bg-black text-lg mt-3 font-medium hover:bg-white hover:text-black border-solid border duration-500">XEM
-            GIỎ HÀNG</button>
+          <NuxtLink to="/cart"
+            class="w-full block text-center border-black py-3 text-white bg-black text-lg mt-3 font-medium hover:bg-white hover:text-black border-solid border duration-500">XEM
+            GIỎ HÀNG</NuxtLink>
         </div>
       </div>
     </div>
@@ -366,43 +366,7 @@
         <div class="w-screen h-screen bg-white block lg:hidden">
           <div class="grid grid-cols-10 border-b">
             <div class="col-span-3 p-4">
-              <NuxtImg src="/images/22.webp" />
-            </div>
-            <div class="col-span-7 flex flex-col justify-center">
-              <div class="text-sm">ADORABLE Starter Set</div>
-              <b class="text-primary">90$</b>
-            </div>
-          </div>
-          <div class="grid grid-cols-10 border-b">
-            <div class="col-span-3 p-4">
-              <NuxtImg src="/images/22.webp" />
-            </div>
-            <div class="col-span-7 flex flex-col justify-center">
-              <div class="text-sm">ADORABLE Starter Set</div>
-              <b class="text-primary">90$</b>
-            </div>
-          </div>
-          <div class="grid grid-cols-10 border-b">
-            <div class="col-span-3 p-4">
-              <NuxtImg src="/images/22.webp" />
-            </div>
-            <div class="col-span-7 flex flex-col justify-center">
-              <div class="text-sm">ADORABLE Starter Set</div>
-              <b class="text-primary">90$</b>
-            </div>
-          </div>
-          <div class="grid grid-cols-10 border-b">
-            <div class="col-span-3 p-4">
-              <NuxtImg src="/images/22.webp" />
-            </div>
-            <div class="col-span-7 flex flex-col justify-center">
-              <div class="text-sm">ADORABLE Starter Set</div>
-              <b class="text-primary">90$</b>
-            </div>
-          </div>
-          <div class="grid grid-cols-10 border-b">
-            <div class="col-span-3 p-4">
-              <NuxtImg src="/images/22.webp" />
+              <NuxtImg width="105" height="105" alt="product" src="/images/22.webp" />
             </div>
             <div class="col-span-7 flex flex-col justify-center">
               <div class="text-sm">ADORABLE Starter Set</div>
@@ -430,7 +394,7 @@
           <div class="flex items-center justify-between">
             <NuxtLink to="/" class="block py-2 text-2xl transition duration-300 ease-in-out ">
               {{ item.name }}
-            </NuxtLink >
+            </NuxtLink>
             <!-- Menu con hiển thị khi click -->
             <div class="mr-5" @click.prevent="toggleMenu(index)" :class="{
               'text-gray-400': selectedMenu !== index

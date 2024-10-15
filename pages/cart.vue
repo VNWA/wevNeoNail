@@ -7,14 +7,14 @@
             <ProcessMobile :number="someNumber" />
         </div>
         <div>
-            <NuxtImg src="/images/banner-5.jpg" />
+            <NuxtImg alt="banner" width="1600" height="300" src="/images/banner-5.jpg" />
         </div>
         <div class="step-name relative flex justify-center items-center my-8">
             <span class=" text-4xl bg-white px-8">Cesta</span>
         </div>
         <div class="relative overflow-x-auto lg:block hidden">
             <table class="w-full text-left rtl:text-right">
-                <thead class=" uppercase border-b  ">
+                <thead class="uppercase border-b ">
                     <tr>
                         <th scope="col" class="px-6 py-3 font-light text-sm">
                             N
@@ -44,18 +44,18 @@
                             1
                         </th>
                         <td class="pr-6 py-4">
-                            <NuxtLink to="/">
-                                <NuxtImg width="100" height="100" src="/images/22.webp" />
+                            <NuxtLink to="/p/a">
+                                <NuxtImg alt="product" width="100" height="100" src="/images/22.webp" />
                             </NuxtLink>
                         </td>
                         <td class="px-6 py-4">
                             <p class="mt-4">
-                                <NuxtLink class="text-xl" to="/">
+                                <NuxtLink class="text-xl" to="/p/a">
                                     Datos de comprador
                                 </NuxtLink>
                             </p>
                             <p>
-                                <NuxtLink class="text-sm" to="/">
+                                <NuxtLink class="text-sm" to="/p/a">
                                     9926-7
                                 </NuxtLink>
                             </p>
@@ -117,12 +117,12 @@
             <div class="grid grid-cols-10 justify-center items-center lg:hidden">
                 <div class="col-span-1 flex justify-center"><span class="text-xl">1</span></div>
                 <div class="col-span-2 flex justify-center mr-4">
-                    <NuxtLink to="/">
-                        <NuxtImg src="/images/36.webp" />
+                    <NuxtLink to="/p/a">
+                        <NuxtImg alt="product" width="100" height="100" src="/images/36.webp" />
                     </NuxtLink>
                 </div>
                 <div class="col-span-6">
-                    <NuxtLink to="/">
+                    <NuxtLink to="/p/a">
                         <h3 class="text-lg mb-1">Gel Polish - 7,2 ml - Crazy Idea</h3>
                         <p class="text-sm">9926-7</p>
                     </NuxtLink>
@@ -191,7 +191,7 @@
         <div>
         </div>
         <div class="flex items-center justify-center mt-10 mb-5 border-b pb-4">
-            <NuxtImg width="42" height="22" class="mr-3" src="/images/icon_free_delivery_info.png" />
+            <NuxtImg alt="ship" width="42" height="22" class="mr-3" src="/images/icon_free_delivery_info.png" />
             <div class="uppercase text-lg font-medium text-gray-800">
                 Te falta para el envío gratuito 64,60 €
             </div>
@@ -244,7 +244,7 @@
                         <input type="radio" value="option1" v-model="selectedOption" class="radio-square" @click.stop />
                     </div>
                     <div class="col-span-2 flex items-center justify-center">
-                        <NuxtImg class="width-full h-auto" width="100" height="70" src="/images/delivery-3.webp" />
+                        <NuxtImg alt="image" class="width-full h-auto" width="100" height="70" src="/images/delivery-3.webp" />
                     </div>
                     <div class="col-span-4">
                         <span>Correos 1</span>
@@ -263,7 +263,7 @@
                         <input type="radio" value="option2" v-model="selectedOption" class="radio-square" @click.stop />
                     </div>
                     <div class="col-span-2 flex items-center justify-center">
-                        <NuxtImg class="width-full h-auto" width="100" height="70" src="/images/delivery-3.webp" />
+                        <NuxtImg alt="image" class="width-full h-auto" width="100" height="70" src="/images/delivery-3.webp" />
                     </div>
                     <div class="col-span-4">
                         <span>Correos 2</span>
@@ -288,7 +288,7 @@
                             @click="selectedOption1 = 'option1'">
                             <div class="m-8">
                                 <div class="object-contain max-w-full">
-                                    <NuxtImg width="160" height="60" class="mb-3" src="/images/payment-18.webp" />
+                                    <NuxtImg alt="image" width="160" height="60" class="mb-3" src="/images/payment-18.webp" />
                                 </div>
                                 <div class="flex items-center justify-center">
                                     <input type="radio" value="option1" v-model="selectedOption1" class="radio-square"
@@ -304,7 +304,7 @@
                             @click="selectedOption1 = 'option2'">
                             <div class="m-8">
                                 <div class="object-contain max-w-full">
-                                    <NuxtImg width="160" height="60" class="mb-3" src="/images/payment-3.webp" />
+                                    <NuxtImg alt="image" width="160" height="60" class="mb-3" src="/images/payment-3.webp" />
                                 </div>
                                 <div class="flex items-center justify-center">
                                     <input type="radio" value="option2" v-model="selectedOption1" class="radio-square"
@@ -320,7 +320,7 @@
                             @click="selectedOption1 = 'option3'">
                             <div class="m-8">
                                 <div class="object-contain max-w-full">
-                                    <NuxtImg width="160" height="60" class="mb-3" src="/images/payment-21.webp" />
+                                    <NuxtImg alt="image" width="160" height="60" class="mb-3" src="/images/payment-21.webp" />
                                 </div>
                                 <div class="flex items-center justify-center">
                                     <input type="radio" value="option3" v-model="selectedOption1" class="radio-square"
@@ -346,13 +346,13 @@
         </div>
         <div class="flex justify-between items-center mt-10">
             <div class="">
-                <NuxtLink to="/"
+                <NuxtLink to="/ask"
                     class="border text-xl border-gray-400 mr-2 text-black bg-white px-5 py-3 transition duration-300 hover:border-primary hover:text-primary">
                     Continuar compra
                 </NuxtLink>
             </div>
             <div class="">
-                <NuxtLink to="/"
+                <NuxtLink to="/oder"
                     class=" text-xl mr-2 text-white bg-primary px-5 py-3 transition duration-300 hover:bg-rose-300 ">
                     Adelante
                 </NuxtLink>

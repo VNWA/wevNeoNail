@@ -35,18 +35,18 @@
                             1
                         </th>
                         <td class="pr-6 py-4">
-                            <NuxtLink to="/">
-                                <NuxtImg width="100" height="100" src="/images/22.webp" />
+                            <NuxtLink to="/p/a">
+                                <NuxtImg alt="product" width="100" height="100" src="/images/22.webp" />
                             </NuxtLink>
                         </td>
                         <td class="px-6 py-4">
                             <p class="mt-4">
-                                <NuxtLink class="text-xl" to="/">
+                                <NuxtLink class="text-xl" to="/p/a">
                                     Datos de comprador
                                 </NuxtLink>
                             </p>
                             <p>
-                                <NuxtLink class="text-sm" to="/">
+                                <NuxtLink class="text-sm" to="/p/a">
                                     9926-7
                                 </NuxtLink>
                             </p>
@@ -103,12 +103,12 @@
             <div class="grid grid-cols-10 justify-center items-center lg:hidden">
                 <div class="col-span-1 flex justify-center"><span class="text-xl">1</span></div>
                 <div class="col-span-2 flex justify-center mr-4">
-                    <NuxtLink to="/">
-                        <NuxtImg src="/images/36.webp" />
+                    <NuxtLink to="/p/a">
+                        <NuxtImg alt="product" width="100" height="100" src="/images/36.webp" />
                     </NuxtLink>
                 </div>
                 <div class="col-span-6">
-                    <NuxtLink to="/">
+                    <NuxtLink to="/p/a">
                         <h3 class="text-lg mb-1">Gel Polish - 7,2 ml - Crazy Idea</h3>
                         <p class="text-sm">9926-7</p>
                     </NuxtLink>
@@ -154,16 +154,16 @@
 
         <div class="flex justify-between items-center mt-10">
             <div class="">
-                <NuxtLink to="/"
-                    class="border text-xl border-gray-400 mr-2 text-black bg-white px-5 py-3 transition duration-300 hover:border-primary hover:text-primary">
+                <div to="/"
+                    class="border cursor-pointer text-xl border-gray-400 mr-2 text-black bg-white px-5 py-3 transition duration-300 hover:border-primary hover:text-primary">
                     Continuar compra
-                </NuxtLink>
+                </div>
             </div>
             <div class="">
-                <NuxtLink to="/"
-                    class=" text-xl mr-2 text-white bg-primary px-5 py-3 transition duration-300 hover:bg-rose-300 ">
+                <div to="/"
+                    class=" text-xl mr-2 text-white cursor-pointer bg-primary px-5 py-3 transition duration-300 hover:bg-rose-400 ">
                     Continuar compra
-                </NuxtLink>
+                </div>
             </div>
         </div>
     </div>

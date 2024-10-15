@@ -16,19 +16,27 @@
                 navigation: true   // Hiện nút điều hướng
             }
         }">
-        <SwiperSlide class="px-10" v-for="(item, index) in data" :key="index">
-            <NuxtLink to="/">
-                <NuxtImg :src="item.image" />
-                <div class="hover:opacity-50">
-                    <div class="text-sm uppercase">
-                        {{ item.name }}
+        <SwiperSlide v-for="(item, index) in data" :key="index">
+            <div class="lg:p-12 p-2">
+                <NuxtLink alt="product" to="/" class="group">
+                    <NuxtImg alt="image" width="750" height="750" :src="item.image" />
+                    <div class="mt-4 group-hover:opacity-70">
+                        <div class="text-base uppercase">
+                            {{ item.name }}
+                        </div>
+                        <div class="flex justify-center items-center gap-2">
+                            <div class="text-sm uppercase line-through">
+                                {{ item.discount }}
+                            </div>
+                            <div class="text-base uppercase">
+                                {{ item.price }}
+                            </div>
+                        </div>
                     </div>
-                    <div class="text-sm uppercase">
-                        {{ item.price }}
-                    </div>
-                </div>
-            </NuxtLink>
+                </NuxtLink>
+            </div>
         </SwiperSlide>
+
     </Swiper>
 
 </template>

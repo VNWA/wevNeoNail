@@ -19,9 +19,9 @@
       <ul class="grid lg:grid-cols-2 mt-8 ml-5 gap-6">
         <li v-for="(item, index) in menuItems" :key="index" class="pb-2 border-b">
           <div class="flex items-center justify-between">
-            <NuxtLink to="/" class="block py-2 text-2xl transition duration-300 ease-in-out ">
+            <div class="block py-2 text-2xl transition duration-300 ease-in-out ">
               {{ item.name }}
-            </NuxtLink>
+            </div>
             <!-- Menu con hiển thị khi click -->
             <div class="mr-5" @click.prevent="toggleMenu(index)" :class="{
               'text-gray-400': selectedMenu !== index

@@ -11,22 +11,25 @@
             :spaceBetween="10" :navigation="true" :thumbs="{ swiper: thumbsSwiper }" :modules="modules"
             class="mySwiper2">
             <swiper-slide v-for="(image, index) in mainImages" :key="index">
-              <NuxtImg :src="image" />
+              <NuxtImg width="500" height="500" alt="product" :src="image" />
             </swiper-slide>
           </swiper>
           <div class="">
             <swiper :pagination="false" @swiper="setThumbsSwiper" :loop="true" :spaceBetween="10" :slidesPerView="5"
               :freeMode="true" :watchSlidesProgress="true" :modules="modules" class=" mySwiper">
               <swiper-slide v-for="(image, index) in thumbnailImages" :key="index">
-                <NuxtImg :src="image" />
+                <NuxtImg width="200" height="200" alt="product" :src="image" />
               </swiper-slide>
             </swiper>
           </div>
         </div>
         <div class="lg:hidden block">
-          <swiper :pagination="true" :modules="modules" class="mySwiper2">
+          <swiper :style="{
+            '--swiper-navigation-color': 'black',
+            '--swiper-pagination-color': 'black',
+          }" :pagination="true" :modules="modules" class="mySwiper2">
             <swiper-slide v-for="(image, index) in mainImages" :key="index">
-              <NuxtImg class="pt-5 px-5" :src="image" />
+              <NuxtImg width="500" height="500" alt="product" class="pt-5 px-5" :src="image" />
             </swiper-slide>
           </swiper>
         </div>
