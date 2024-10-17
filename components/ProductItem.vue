@@ -15,7 +15,7 @@
             <div class=" block group-hover:hidden">
                 <NuxtLink aria-label="VNWA Link" to="/p/teo-dep-trai">
                     <div class="flex items-center justify-center">
-                        <NuxtImg alt="product" :src="dataPro.image[0]" class="default-image"
+                        <NuxtImg  loading="lazy" alt="product" :src="dataPro.image[0]" class="default-image"
                             v-if="dataPro.image.length > 0" width="200" height="200" />
                     </div>
                     <p class="text-center text-sm ">{{ dataPro.title }}</p> <!-- Tên sản phẩm -->
@@ -30,12 +30,12 @@
                     </div>
                     <!-- Nút hiển thị giảm giá, sẽ bị ẩn khi hover -->
                     <div class="text-center ">
-                        <button class="py-1 px-2 me-2 mb-2 text-xs text-white bg-red-700 rounded-full">
+                        <button aria-label="VNWA Button" class="py-1 px-2 me-2 mb-2 text-xs text-white bg-red-700 rounded-full">
                             AHORRAS 10%
                         </button>
                     </div>
                     <div class="flex items-center justify-center my-4 lg:hidden ">
-                        <button class="flex text-white bg-black px-10 py-2 items-center justify-center">
+                        <button aria-label="VNWA Button" class="flex text-white bg-black px-10 py-2 items-center justify-center">
                             <Icon class="mr-1" name="ph:handbag-simple-light" />
                             <div class="tracking-wider">
                                 COMPRAR
@@ -66,7 +66,7 @@
                 <!-- Đặt phần nút và biểu tượng vào bên trong cùng div với swiper -->
                 <div>
                     <div class="flex items-center justify-center my-4 ">
-                        <button class="flex text-white bg-black px-10 py-2 items-center justify-center">
+                        <button aria-label="VNWA Button" class="flex text-white bg-black px-10 py-2 items-center justify-center">
                             <Icon class="mr-1" name="ph:handbag-simple-light" />
                             <div class="tracking-wider">
                                 COMPRAR

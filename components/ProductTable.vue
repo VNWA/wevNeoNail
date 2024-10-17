@@ -33,7 +33,7 @@
                     </th>
                     <td class="pr-6 py-4">
                         <NuxtLink aria-label="VNWA Link" to="/p/a">
-                            <NuxtImg alt="product" width="100" height="100" :src="item.image" />
+                            <NuxtImg  loading="lazy" alt="product" width="100" height="100" :src="item.image" />
                         </NuxtLink>
                     </td>
                     <td class="px-6 py-4">

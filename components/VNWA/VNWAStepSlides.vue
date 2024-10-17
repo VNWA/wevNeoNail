@@ -26,7 +26,7 @@
                             <div class="lg:px-10 px-12 py-4">
                                 <div class="grid lg:grid-cols-2 gap-8">
                                     <div>
-                                        <NuxtImg width="800" height="450" alt="product" :src="item.image" />
+                                        <NuxtImg  loading="lazy" width="800" height="450" alt="product" :src="item.image" />
                                     </div>
                                     <div class="text-left lg:text-base text-2xl">
                                         <div class="font-semibold text-2xl py-3">
@@ -41,7 +41,7 @@
                                                 <li v-for="(product, pIndex) in item.products" :key="pIndex">
                                                     <div class="grid grid-cols-12">
                                                         <div class="col-span-2">
-                                                            <NuxtImg :src="product.image" alt="product" width="100"
+                                                            <NuxtImg  loading="lazy" :src="product.image" alt="product" width="100"
                                                                 height="100" />
                                                         </div>
                                                         <div class="text-left col-span-10 pl-3">

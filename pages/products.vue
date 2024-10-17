@@ -1,10 +1,10 @@
 <template>
   <div class="container mx-auto">
     <div class="w-full hidden lg:block">
-      <NuxtImg width="100%" class="cursor-pointer mb-2" src="/images/banner-490.webp" />
+      <NuxtImg  loading="lazy" width="100%" class="cursor-pointer mb-2" src="/images/banner-490.webp" />
     </div>
     <div class="lg:hidden mt-1">
-      <NuxtImg width="370" height="145" class="w-full h-auto cursor-pointer mb-2" src="/images/banner-mobile-490.jpg" />
+      <NuxtImg  loading="lazy" width="370" height="145" class="w-full h-auto cursor-pointer mb-2" src="/images/banner-mobile-490.jpg" />
     </div>
     <div>
       <Breadcrumb />
@@ -108,7 +108,7 @@
       </div>
     </div>
     <div>
-      <button class="w-full bg-primary py-3 text-white text-2xl font-semibold my-4 block lg:hidden">
+      <button aria-label="VNWA Button" class="w-full bg-primary py-3 text-white text-2xl font-semibold my-4 block lg:hidden">
         FILTROS
       </button>
     </div>

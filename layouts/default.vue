@@ -32,7 +32,7 @@
           <!-- Logo Section -->
           <div class=" flex justify-start items-center w-full lg:w-3/4">
             <NuxtLink aria-label="VNWA Link" to="/">
-              <NuxtImg alt="logo" width="260px" height="64px" class="bg-black" src="/images/logo.webp" />
+              <NuxtImg  loading="lazy" alt="logo" width="260px" height="64px" class="bg-black" src="/images/logo.webp" />
             </NuxtLink>
           </div>
           <!-- Search Input and Icons Section -->
@@ -49,7 +49,7 @@
                 <NuxtLink aria-label="VNWA Link" to="/p/a">
                   <div class="grid grid-cols-10 border-b">
                     <div class="col-span-2 flex items-center justify-center px-2 ">
-                      <NuxtImg alt="product" width="80" height="80" src="/images/22.webp" />
+                      <NuxtImg  loading="lazy" alt="product" width="80" height="80" src="/images/22.webp" />
                     </div>
                     <div class="col-span-8 flex flex-col justify-center items-start">
                       <div class="text-sm">ADORABLE Starter Set</div>
@@ -60,7 +60,7 @@
               </div>
             </div>
             <div class="flex justify-end items-center w-full mr-2 lg:hidden ">
-              <button @click="  isSearchOpen = !isSearchOpen"
+              <button aria-label="VNWA Button" @click="  isSearchOpen = !isSearchOpen"
                 class="flex items-center rounded-md text-black pl-4 text-center text-xl  ">
                 <Icon name="ph:magnifying-glass" class="w-10 h-10 mr-2" />
               </button>
@@ -223,7 +223,7 @@
       <div class="p-5 pt-0">
         <div class="flex border-b py-5 w-full">
           <div class="lg:mr-2 mr-6">
-            <NuxtImg alt="product" src="/images/0001.webp" width="64" height="96" />
+            <NuxtImg  loading="lazy" alt="product" src="/images/0001.webp" width="64" height="96" />
           </div>
           <div>
             <div class="font-light text-gray-800 inline-block lg:text-base text-2xl">
@@ -234,13 +234,13 @@
             </div>
             <div class="flex items-center justify-between">
               <div>
-                <button @click="decrement" class="bg-gray-200 text-gray-800 lg:px-2 lg:py-1 px-4 py-2 hover:bg-primary">
+                <button aria-label="VNWA Button" @click="decrement" class="bg-gray-200 text-gray-800 lg:px-2 lg:py-1 px-4 py-2 hover:bg-primary">
                   -
                 </button>
                 <!-- Hiển thị số lượng -->
-                <button class=" border lg:px-2 lg:py-1 px-4 py-2 bg-gray-100">{{ quantity }}</button>
+                <button aria-label="VNWA Button" class=" border lg:px-2 lg:py-1 px-4 py-2 bg-gray-100">{{ quantity }}</button>
                 <!-- Nút cộng số lượng -->
-                <button @click="increment" class="bg-gray-200 text-gray-800 lg:px-2 lg:py-1 px-4 py-2 hover:bg-primary">
+                <button aria-label="VNWA Button" @click="increment" class="bg-gray-200 text-gray-800 lg:px-2 lg:py-1 px-4 py-2 hover:bg-primary">
                   +
                 </button>
               </div>
@@ -253,7 +253,7 @@
         </div>
         <div class="flex border-b py-5 w-full">
           <div class="lg:mr-2 mr-6">
-            <NuxtImg alt="product" src="/images/0001.webp" width="64" height="96" />
+            <NuxtImg  loading="lazy" alt="product" src="/images/0001.webp" width="64" height="96" />
           </div>
           <div>
             <div class="font-light text-gray-800 inline-block lg:text-base text-2xl">
@@ -264,13 +264,13 @@
             </div>
             <div class="flex items-center justify-between">
               <div>
-                <button @click="decrement" class="bg-gray-200 text-gray-800 lg:px-2 lg:py-1 px-4 py-2 hover:bg-primary">
+                <button aria-label="VNWA Button" @click="decrement" class="bg-gray-200 text-gray-800 lg:px-2 lg:py-1 px-4 py-2 hover:bg-primary">
                   -
                 </button>
                 <!-- Hiển thị số lượng -->
-                <button class=" border lg:px-2 lg:py-1 px-4 py-2 bg-gray-100">{{ quantity }}</button>
+                <button aria-label="VNWA Button" class=" border lg:px-2 lg:py-1 px-4 py-2 bg-gray-100">{{ quantity }}</button>
                 <!-- Nút cộng số lượng -->
-                <button @click="increment" class="bg-gray-200 text-gray-800 lg:px-2 lg:py-1 px-4 py-2 hover:bg-primary">
+                <button aria-label="VNWA Button" @click="increment" class="bg-gray-200 text-gray-800 lg:px-2 lg:py-1 px-4 py-2 hover:bg-primary">
                   +
                 </button>
               </div>
@@ -283,7 +283,7 @@
         </div>
         <div class="flex border-b py-5 w-full">
           <div class="lg:mr-2 mr-6">
-            <NuxtImg alt="product" src="/images/0001.webp" width="64" height="96" />
+            <NuxtImg  loading="lazy" alt="product" src="/images/0001.webp" width="64" height="96" />
           </div>
           <div>
             <div class="font-light text-gray-800 inline-block lg:text-base text-2xl">
@@ -294,13 +294,13 @@
             </div>
             <div class="flex items-center justify-between">
               <div>
-                <button @click="decrement" class="bg-gray-200 text-gray-800 lg:px-2 lg:py-1 px-4 py-2 hover:bg-primary">
+                <button aria-label="VNWA Button" @click="decrement" class="bg-gray-200 text-gray-800 lg:px-2 lg:py-1 px-4 py-2 hover:bg-primary">
                   -
                 </button>
                 <!-- Hiển thị số lượng -->
-                <button class=" border lg:px-2 lg:py-1 px-4 py-2 bg-gray-100">{{ quantity }}</button>
+                <button aria-label="VNWA Button" class=" border lg:px-2 lg:py-1 px-4 py-2 bg-gray-100">{{ quantity }}</button>
                 <!-- Nút cộng số lượng -->
-                <button @click="increment" class="bg-gray-200 text-gray-800 lg:px-2 lg:py-1 px-4 py-2 hover:bg-primary">
+                <button aria-label="VNWA Button" @click="increment" class="bg-gray-200 text-gray-800 lg:px-2 lg:py-1 px-4 py-2 hover:bg-primary">
                   +
                 </button>
               </div>
@@ -313,7 +313,7 @@
         </div>
         <div class="flex border-b py-5 w-full">
           <div class="lg:mr-2 mr-6">
-            <NuxtImg alt="product" src="/images/0001.webp" width="64" height="96" />
+            <NuxtImg  loading="lazy" alt="product" src="/images/0001.webp" width="64" height="96" />
           </div>
           <div>
             <div class="font-light text-gray-800 inline-block lg:text-base text-2xl">
@@ -324,13 +324,13 @@
             </div>
             <div class="flex items-center justify-between">
               <div>
-                <button @click="decrement" class="bg-gray-200 text-gray-800 lg:px-2 lg:py-1 px-4 py-2 hover:bg-primary">
+                <button aria-label="VNWA Button" @click="decrement" class="bg-gray-200 text-gray-800 lg:px-2 lg:py-1 px-4 py-2 hover:bg-primary">
                   -
                 </button>
                 <!-- Hiển thị số lượng -->
-                <button class=" border lg:px-2 lg:py-1 px-4 py-2 bg-gray-100">{{ quantity }}</button>
+                <button aria-label="VNWA Button" class=" border lg:px-2 lg:py-1 px-4 py-2 bg-gray-100">{{ quantity }}</button>
                 <!-- Nút cộng số lượng -->
-                <button @click="increment" class="bg-gray-200 text-gray-800 lg:px-2 lg:py-1 px-4 py-2 hover:bg-primary">
+                <button aria-label="VNWA Button" @click="increment" class="bg-gray-200 text-gray-800 lg:px-2 lg:py-1 px-4 py-2 hover:bg-primary">
                   +
                 </button>
               </div>
@@ -368,7 +368,7 @@
         <div class="w-screen h-screen bg-white block lg:hidden">
           <div class="grid grid-cols-10 border-b">
             <div class="col-span-3 p-4">
-              <NuxtImg width="105" height="105" alt="product" src="/images/22.webp" />
+              <NuxtImg  loading="lazy" width="105" height="105" alt="product" src="/images/22.webp" />
             </div>
             <div class="col-span-7 flex flex-col justify-center">
               <div class="text-sm">ADORABLE Starter Set</div>
@@ -417,7 +417,7 @@
     </nav>
     <div class="z-50 fixed bottom-0 left w-full  bg-white border-t lg:hidden">
       <div class="flex items-center justify-around py-2">
-        <button @click="  isMenuOpen = !isMenuOpen" :class="{ 'text-primary': isMenuOpen }">
+        <button aria-label="VNWA Button" @click="  isMenuOpen = !isMenuOpen" :class="{ 'text-primary': isMenuOpen }">
           <Icon class="text-3xl" name="gravity-ui:bars-unaligned" />
         </button>
         <NuxtLink aria-label="VNWA Link" to="/">

@@ -20,13 +20,13 @@
                                 <li class="lg:py-1 text-xs lg:text-base p-padding">Over 400 colors</li>
                                 <li class="lg:py-1 text-xs lg:text-base p-padding">Also suitable for brittle nails</li>
                             </ul>
-                            <button style="border: 1px solid black;"
+                            <button aria-label="VNWA Button" style="border: 1px solid black;"
                                 class="bg-black text-white border my-2 lg:my-0 border-black lg:px-16 px-4 text-xs lg:text-base lg:py-2 py-1 d-lg hover:bg-white hover:text-black hover:border-black transition duration-300">
                                 Sign Up
                             </button>
                         </div>
                         <div class="col-span-1 lg:px-3 flex justify-center items-center">
-                            <NuxtImg alt="image" width="150" height="320" src="/images/24.webp" />
+                            <NuxtImg  loading="lazy" alt="image" width="150" height="320" src="/images/24.webp" />
                         </div>
                         <div class="hidden col-span-2 lg:block">
                             <ul class="list-disc text-left ml-7">
@@ -51,7 +51,7 @@
                             </ul>
                         </div>
                         <div class="col-span-1 lg:px-3 flex justify-center items-center">
-                            <NuxtImg alt="image" width="150" height="320" src="/images/25.webp" />
+                            <NuxtImg  loading="lazy" alt="image" width="150" height="320" src="/images/25.webp" />
                         </div>
                         <div class="lg:col-span-2 col-span-1">
                             <div
@@ -66,7 +66,7 @@
                                 <li class="lg:py-1 text-xs lg:text-base p-padding">Over 400 colors</li>
                                 <li class="lg:py-1 text-xs lg:text-base p-padding">Also suitable for brittle nails</li>
                             </ul>
-                            <button style="border: 1px solid black;"
+                            <button aria-label="VNWA Button" style="border: 1px solid black;"
                                 class="bg-black text-white border my-2 lg:my-0 border-black lg:px-16 px-4 text-xs lg:text-base lg:py-2 py-1 d-lg hover:bg-white hover:text-black hover:border-black transition duration-300">
                                 Sign Up
                             </button>

@@ -1,7 +1,7 @@
 <template>
     <div class="overflow-hidden">
         <NuxtLink aria-label="VNWA Link" to="/">
-            <NuxtImg :alt="image" class="lg:hover:scale-105 lg:transition-all" width="485" height="485" :src="image" />
+            <NuxtImg  loading="lazy" :alt="image" class="lg:hover:scale-105 lg:transition-all" width="485" height="485" :src="image" />
         </NuxtLink>
     </div>
 </template>

@@ -11,14 +11,14 @@
             :spaceBetween="10" :navigation="true" :thumbs="{ swiper: thumbsSwiper }" :modules="modules"
             class="mySwiper2">
             <swiper-slide v-for="(image, index) in mainImages" :key="index">
-              <NuxtImg width="500" height="500" alt="product" :src="image" />
+              <NuxtImg  loading="lazy" width="500" height="500" alt="product" :src="image" />
             </swiper-slide>
           </swiper>
           <div class="">
             <swiper :pagination="false" @swiper="setThumbsSwiper" :loop="true" :spaceBetween="10" :slidesPerView="5"
               :freeMode="true" :watchSlidesProgress="true" :modules="modules" class=" mySwiper">
               <swiper-slide v-for="(image, index) in thumbnailImages" :key="index">
-                <NuxtImg width="200" height="200" alt="product" :src="image" />
+                <NuxtImg  loading="lazy" width="200" height="200" alt="product" :src="image" />
               </swiper-slide>
             </swiper>
           </div>
@@ -29,7 +29,7 @@
             '--swiper-pagination-color': 'black',
           }" :pagination="true" :modules="modules" class="mySwiper2">
             <swiper-slide v-for="(image, index) in mainImages" :key="index">
-              <NuxtImg width="500" height="500" alt="product" class="pt-5 px-5" :src="image" />
+              <NuxtImg  loading="lazy" width="500" height="500" alt="product" class="pt-5 px-5" :src="image" />
             </swiper-slide>
           </swiper>
         </div>
@@ -43,9 +43,9 @@
           <div class="flex lg:jutify justify-between">
             <div class="text-3xl font-bold mr-8 py-1">85$</div>
             <div class="flex justify-center items-center rounded-md border">
-              <button @click="decrement" class="text-gray-800 px-4 py-2 hover:bg-primary">-</button>
+              <button aria-label="VNWA Button" @click="decrement" class="text-gray-800 px-4 py-2 hover:bg-primary">-</button>
               <span class="border-r border-l px-4 py-2">{{ quantity }}</span>
-              <button @click="increment" class="text-gray-800 px-4 py-2 hover:bg-primary">+</button>
+              <button aria-label="VNWA Button" @click="increment" class="text-gray-800 px-4 py-2 hover:bg-primary">+</button>
             </div>
           </div>
         </div>
@@ -56,7 +56,7 @@
           El precio más bajo durante los 30 días anteriores a la introducción de la promoción: 20,99 €
         </div>
         <div class="flex lg:my-6 my-3 items-center">
-          <button
+          <button aria-label="VNWA Button"
             class="bg-black w-full lg:w-auto py-4 lg:px-16 text-white flex lg:mr-6 justify-center text-3xl lg:text-base items-center uppercase">
             <Icon name="ph:handbag-simple-light" class="hover:opacity-70 w-6 h-6 mr-4" />
             A la cesta
@@ -70,7 +70,7 @@
           El precio más bajo durante los 30 días anteriores a la introducción de la promoción: 20,99 €
         </div>
         <div class="lg:my-6 my-3 flex">
-          <NuxtImg width="42" height="22" class="mr-3" src="/images/icon_free_delivery_info.png" />
+          <NuxtImg  loading="lazy" width="42" height="22" class="mr-3" src="/images/icon_free_delivery_info.png" />
           Plazo de envío del almacén: <b class="pl-1">48h</b>
         </div>
       </div>
@@ -78,7 +78,7 @@
     <div class="lg:block hidden mt-4">
       <div class="flex ">
         <div v-for="(tab, index) in tabs" :key="index" class="mr-2">
-          <button
+          <button aria-label="VNWA Button"
             :class="['py-4 px-6 text-xl', { 'bg-primary hover:bg-rose-300 text-white': currentTab === index, 'bg-gray-200 hover:bg-gray-300': currentTab !== index }]"
             @click="currentTab = index">
             {{ tab.name }}

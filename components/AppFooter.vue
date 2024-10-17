@@ -12,7 +12,7 @@
           <div class="col-span-1 lg:mr-9">
             <input type="text" placeholder="Enter your email"
               class="w-full border border-black focus:border-gray-400 focus:outline-none p-2 pl-5 my-4">
-            <button style="border: 1px solid black;"
+            <button aria-label="VNWA Button" style="border: 1px solid black;"
               class="bg-black text-white border border-black px-16 py-2 d-lg hover:bg-white hover:text-black hover:border-black transition duration-300 mt-1 lg:mb-0 mb-4">
               Subscribe
             </button>
@@ -117,37 +117,37 @@
             <li class="pb-3 font-medium border-b mb-3">DELIVERY FROM 4,90 €</li>
             <li class="py-4 grid grid-cols-4 gap-3 ">
               <div class=" h-16 border border-black/50 flex items-center justify-center bg-white px-3">
-                <NuxtImg alt="image" width="100" class="w-full h-auto" src="/images/1.webp" />
+                <NuxtImg  loading="lazy" alt="image" width="100" class="w-full h-auto" src="/images/1.webp" />
               </div>
               <div class=" h-16 border border-black/50 flex items-center justify-center bg-white px-3">
-                <NuxtImg alt="image" width="100" class="w-full h-auto" src="/images/2.webp" />
+                <NuxtImg  loading="lazy" alt="image" width="100" class="w-full h-auto" src="/images/2.webp" />
               </div>
             </li>
             <li class=" font-medium">PAYMENT METHODS</li>
             <li class="py-4 grid grid-cols-4 gap-3 ">
               <div class=" h-16 border border-black/50 flex items-center justify-center bg-white px-3">
-                <NuxtImg alt="image" width="100" class="w-full h-auto" src="/images/3.webp" />
+                <NuxtImg  loading="lazy" alt="image" width="100" class="w-full h-auto" src="/images/3.webp" />
               </div>
               <div class=" h-16 border border-black/50 flex items-center justify-center bg-white px-3">
-                <NuxtImg alt="image" width="100" class="w-full h-auto" src="/images/4.webp" />
+                <NuxtImg  loading="lazy" alt="image" width="100" class="w-full h-auto" src="/images/4.webp" />
               </div>
               <div class=" h-16 border border-black/50 flex items-center justify-center bg-white px-3">
-                <NuxtImg alt="image" width="100" class="w-full h-auto" src="/images/5.webp" />
+                <NuxtImg  loading="lazy" alt="image" width="100" class="w-full h-auto" src="/images/5.webp" />
               </div>
               <div class=" h-16 border border-black/50 flex items-center justify-center bg-white px-3">
-                <NuxtImg alt="image" width="100" class="w-full h-auto" src="/images/6.webp" />
+                <NuxtImg  loading="lazy" alt="image" width="100" class="w-full h-auto" src="/images/6.webp" />
               </div>
               <div class=" h-16 border border-black/50 flex items-center justify-center bg-white px-3">
-                <NuxtImg alt="image" width="100" class="w-full h-auto" src="/images/7.webp" />
+                <NuxtImg  loading="lazy" alt="image" width="100" class="w-full h-auto" src="/images/7.webp" />
               </div>
               <div class=" h-16 border border-black/50 flex items-center justify-center bg-white px-3">
-                <NuxtImg alt="image" width="100" class="w-full h-auto" src="/images/8.webp" />
+                <NuxtImg  loading="lazy" alt="image" width="100" class="w-full h-auto" src="/images/8.webp" />
               </div>
               <div class=" h-16 border border-black/50 flex items-center justify-center bg-white px-3">
-                <NuxtImg alt="image" width="100" class="w-full h-auto" src="/images/9.webp" />
+                <NuxtImg  loading="lazy" alt="image" width="100" class="w-full h-auto" src="/images/9.webp" />
               </div>
               <div class=" h-16 border border-black/50 flex items-center justify-center bg-white px-3">
-                <NuxtImg alt="image" width="100" class="w-full h-auto" src="/images/10.webp" />
+                <NuxtImg  loading="lazy" alt="image" width="100" class="w-full h-auto" src="/images/10.webp" />
               </div>
             </li>
           </ul>
@@ -166,14 +166,14 @@
               8:00 - 15:00.
             </li>
             <li class="pt-3">
-              <button style="border: 1px solid black;"
+              <button aria-label="VNWA Button" style="border: 1px solid black;"
                 class=" whitespace-nowrap text-xl bg-white text-black border border-black px-16 py-2 d-lg hover:bg-primary hover:text-white hover:border-primary transition duration-700">
                 CONTACT FORM
               </button>
             </li>
             <li class="py-2">
               <NuxtLink to="/">
-                <NuxtImg width="auto" height="100" src="/images/1 (1).png" />
+                <NuxtImg  loading="lazy" width="200" height="100" alt="image" src="/images/1 (1).png" />
               </NuxtLink>
             </li>
           </ul>

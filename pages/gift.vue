@@ -8,7 +8,7 @@
       <div class="grid lg:grid-cols-12 pb-8">
         <div class="lg:col-span-3">
           <div class="bg-white rounded-l-md rounded-b-md" style="height: 26rem;">
-            <NuxtImg alt="product" width="375" height="375" class="pt-5" src="/images/02.jpg" />
+            <NuxtImg  loading="lazy" alt="product" width="375" height="375" class="pt-5" src="/images/02.jpg" />
           </div>
         </div>
         <div class="lg:col-span-6">
@@ -21,7 +21,7 @@
                 ideal! ¿Quieres
                 obsequiar a alguien cercano? ¡Nuestro Kit de manicura es el regalo perfecto!</p>
               <div class="text-right">
-                <button class="border border-solid bg-black text-white py-4 px-12 text-xl hover:border-primary">
+                <button aria-label="VNWA Button" class="border border-solid bg-black text-white py-4 px-12 text-xl hover:border-primary">
                   VER
                 </button>
               </div>
@@ -29,7 +29,7 @@
           </div>
           <div class="lg:col-span-3 order-1 lg:hidden flex-col justify-end flex mt-14">
           <div class="bg-white rounded-l-md rounded-b-md" style="height: 26rem;">
-            <NuxtImg alt="product" width="375" height="375" class="pt-5" src="/images/02.jpg" />
+            <NuxtImg  loading="lazy" alt="product" width="375" height="375" class="pt-5" src="/images/02.jpg" />
           </div>
         </div>
           <div class="h-80 bg-white rounded-l-md lg:mt-7 lg:ml-7">
@@ -41,7 +41,7 @@
                 ideal! ¿Quieres
                 obsequiar a alguien cercano? ¡Nuestro Kit de manicura es el regalo perfecto!</p>
               <div class="lg:text-left text-right">
-                <button class="border border-solid bg-black text-white py-4
+                <button aria-label="VNWA Button" class="border border-solid bg-black text-white py-4
                  px-12 text-xl hover:border-primary">
                   VER
                 </button>
@@ -51,7 +51,7 @@
         </div>
         <div class="lg:col-span-3 order-1 lg:flex flex-col justify-end hidden">
           <div class="bg-white rounded-l-md rounded-b-md" style="height: 26rem;">
-            <NuxtImg alt="product" width="375" height="375" class="pt-5" src="/images/02.jpg" />
+            <NuxtImg  loading="lazy" alt="product" width="375" height="375" class="pt-5" src="/images/02.jpg" />
           </div>
         </div>
       </div>

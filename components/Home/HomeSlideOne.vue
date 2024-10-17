@@ -17,7 +17,7 @@
         }">
         <SwiperSlide class="lg:mt-16" v-for="(item, index) in data" :key="index">
             <div class="lg:px-6 py-2 lg:my-0 my-6">
-                <NuxtImg alt="image" width="270" height="270" class="lg:px-4" :src="item.image" />
+                <NuxtImg  loading="lazy" alt="image" width="270" height="270" class="lg:px-4" :src="item.image" />
                 <div class="hover:opacity-60">
                     <div class="lg:text-sm text-3xl">
                         {{ item.title }}

@@ -24,7 +24,7 @@
                                 <div class="text-sm">
                                     <span class="text-primary">*</span> - campos obligatorios
                                 </div>
-                                <button type="submit"
+                                <button aria-label="VNWA Button" type="submit"
                                     class="bg-primary uppercase text-white py-4 px-3 hover:bg-rose-300 duration-300">Guardar
                                     cambios</button>
                             </div>

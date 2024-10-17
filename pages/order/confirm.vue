@@ -18,7 +18,7 @@
           <div class="col-span-1 flex justify-center"><span class="text-xl">1</span></div>
           <div class="col-span-2 flex justify-center mr-4">
             <NuxtLink aria-label="VNWA Link" to="/p/a">
-              <NuxtImg alt="product" width="100" height="100" src="/images/36.webp" />
+              <NuxtImg  loading="lazy" alt="product" width="100" height="100" src="/images/36.webp" />
             </NuxtLink>
           </div>
           <div class="col-span-6">

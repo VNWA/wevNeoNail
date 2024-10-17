@@ -117,7 +117,7 @@
                 <Select />
               </div>
               <div class="my-2 flex justify-end">
-                <button type="submit" class="bg-primary text-white py-4 px-3 hover:bg-rose-300 duration-300">Guardar
+                <button aria-label="VNWA Button" type="submit" class="bg-primary text-white py-4 px-3 hover:bg-rose-300 duration-300">Guardar
                   cambios</button>
               </div>
             </form>

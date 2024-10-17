@@ -7,7 +7,7 @@
             <ProcessMobile :number="someNumber" />
         </div>
         <div>
-            <NuxtImg alt="banner" width="1600" height="300" src="/images/banner-5.jpg" />
+            <NuxtImg  loading="lazy" alt="banner" width="1600" height="300" src="/images/banner-5.jpg" />
         </div>
         <div class="step-name relative flex justify-center items-center my-8">
             <span class=" text-4xl bg-white px-8">Cesta</span>
@@ -45,7 +45,7 @@
                         </th>
                         <td class="pr-6 py-4">
                             <NuxtLink aria-label="VNWA Link" to="/p/a">
-                                <NuxtImg alt="product" width="100" height="100" src="/images/22.webp" />
+                                <NuxtImg  loading="lazy" alt="product" width="100" height="100" src="/images/22.webp" />
                             </NuxtLink>
                         </td>
                         <td class="px-6 py-4">
@@ -73,14 +73,14 @@
                         <td class="px-6 py-4">
                             <div class="flex items-center space-x-3">
                                 <!-- Nút trừ số lượng -->
-                                <button @click="decrement"
+                                <button aria-label="VNWA Button" @click="decrement"
                                     class="bg-gray-200 text-gray-800 px-2 rounded-md hover:bg-primary">
                                     -
                                 </button>
                                 <!-- Hiển thị số lượng -->
                                 <span class="text-lg">{{ quantity }}</span>
                                 <!-- Nút cộng số lượng -->
-                                <button @click="increment"
+                                <button aria-label="VNWA Button" @click="increment"
                                     class="bg-gray-200 text-gray-800 px-2 rounded-md hover:bg-primary">
                                     +
                                 </button>
@@ -118,7 +118,7 @@
                 <div class="col-span-1 flex justify-center"><span class="text-xl">1</span></div>
                 <div class="col-span-2 flex justify-center mr-4">
                     <NuxtLink aria-label="VNWA Link" to="/p/a">
-                        <NuxtImg alt="product" width="100" height="100" src="/images/36.webp" />
+                        <NuxtImg  loading="lazy" alt="product" width="100" height="100" src="/images/36.webp" />
                     </NuxtLink>
                 </div>
                 <div class="col-span-6">
@@ -148,13 +148,13 @@
                     <div>
                         <div class="flex justify-center items-center">
                             <!-- Nút trừ số lượng -->
-                            <button @click="decrement" class="bg-gray-200 text-gray-800 px-4 py-2 hover:bg-primary">
+                            <button aria-label="VNWA Button" @click="decrement" class="bg-gray-200 text-gray-800 px-4 py-2 hover:bg-primary">
                                 -
                             </button>
                             <!-- Hiển thị số lượng -->
-                            <button class=" border px-4 py-2 bg-gray-100">{{ quantity }}</button>
+                            <button aria-label="VNWA Button" class=" border px-4 py-2 bg-gray-100">{{ quantity }}</button>
                             <!-- Nút cộng số lượng -->
-                            <button @click="increment" class="bg-gray-200 text-gray-800 px-4 py-2 hover:bg-primary">
+                            <button aria-label="VNWA Button" @click="increment" class="bg-gray-200 text-gray-800 px-4 py-2 hover:bg-primary">
                                 +
                             </button>
                         </div>
@@ -191,7 +191,7 @@
         <div>
         </div>
         <div class="flex items-center justify-center mt-10 mb-5 border-b pb-4">
-            <NuxtImg alt="ship" width="42" height="22" class="mr-3" src="/images/icon_free_delivery_info.png" />
+            <NuxtImg  loading="lazy" alt="ship" width="42" height="22" class="mr-3" src="/images/icon_free_delivery_info.png" />
             <div class="uppercase text-lg font-medium text-gray-800">
                 Te falta para el envío gratuito 64,60 €
             </div>
@@ -244,7 +244,7 @@
                         <input type="radio" value="option1" v-model="selectedOption" class="radio-square" @click.stop />
                     </div>
                     <div class="col-span-2 flex items-center justify-center">
-                        <NuxtImg alt="image" class="width-full h-auto" width="100" height="70"
+                        <NuxtImg  loading="lazy" alt="image" class="width-full h-auto" width="100" height="70"
                             src="/images/delivery-3.webp" />
                     </div>
                     <div class="col-span-4">
@@ -264,7 +264,7 @@
                         <input type="radio" value="option2" v-model="selectedOption" class="radio-square" @click.stop />
                     </div>
                     <div class="col-span-2 flex items-center justify-center">
-                        <NuxtImg alt="image" class="width-full h-auto" width="100" height="70"
+                        <NuxtImg  loading="lazy" alt="image" class="width-full h-auto" width="100" height="70"
                             src="/images/delivery-3.webp" />
                     </div>
                     <div class="col-span-4">
@@ -290,7 +290,7 @@
                             @click="selectedOption1 = 'option1'">
                             <div class="m-8">
                                 <div class="object-contain max-w-full">
-                                    <NuxtImg alt="image" width="160" height="60" class="mb-3"
+                                    <NuxtImg  loading="lazy" alt="image" width="160" height="60" class="mb-3"
                                         src="/images/payment-18.webp" />
                                 </div>
                                 <div class="flex items-center justify-center">
@@ -307,7 +307,7 @@
                             @click="selectedOption1 = 'option2'">
                             <div class="m-8">
                                 <div class="object-contain max-w-full">
-                                    <NuxtImg alt="image" width="160" height="60" class="mb-3"
+                                    <NuxtImg  loading="lazy" alt="image" width="160" height="60" class="mb-3"
                                         src="/images/payment-3.webp" />
                                 </div>
                                 <div class="flex items-center justify-center">
@@ -324,7 +324,7 @@
                             @click="selectedOption1 = 'option3'">
                             <div class="m-8">
                                 <div class="object-contain max-w-full">
-                                    <NuxtImg alt="image" width="160" height="60" class="mb-3"
+                                    <NuxtImg  loading="lazy" alt="image" width="160" height="60" class="mb-3"
                                         src="/images/payment-21.webp" />
                                 </div>
                                 <div class="flex items-center justify-center">

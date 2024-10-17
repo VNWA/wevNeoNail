@@ -19,7 +19,7 @@
         <SwiperSlide v-for="(item, index) in data" :key="index">
             <div class="lg:p-12 p-2">
                 <NuxtLink aria-label="VNWA Link" alt="product" to="/" class="group">
-                    <NuxtImg alt="image" width="750" height="750" :src="item.image" />
+                    <NuxtImg  loading="lazy" alt="image" width="750" height="750" :src="item.image" />
                     <div class="mt-4 group-hover:opacity-70">
                         <div class="text-base uppercase">
                             {{ item.name }}
