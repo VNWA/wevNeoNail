@@ -244,7 +244,8 @@
                         <input type="radio" value="option1" v-model="selectedOption" class="radio-square" @click.stop />
                     </div>
                     <div class="col-span-2 flex items-center justify-center">
-                        <NuxtImg alt="image" class="width-full h-auto" width="100" height="70" src="/images/delivery-3.webp" />
+                        <NuxtImg alt="image" class="width-full h-auto" width="100" height="70"
+                            src="/images/delivery-3.webp" />
                     </div>
                     <div class="col-span-4">
                         <span>Correos 1</span>
@@ -263,7 +264,8 @@
                         <input type="radio" value="option2" v-model="selectedOption" class="radio-square" @click.stop />
                     </div>
                     <div class="col-span-2 flex items-center justify-center">
-                        <NuxtImg alt="image" class="width-full h-auto" width="100" height="70" src="/images/delivery-3.webp" />
+                        <NuxtImg alt="image" class="width-full h-auto" width="100" height="70"
+                            src="/images/delivery-3.webp" />
                     </div>
                     <div class="col-span-4">
                         <span>Correos 2</span>
@@ -288,7 +290,8 @@
                             @click="selectedOption1 = 'option1'">
                             <div class="m-8">
                                 <div class="object-contain max-w-full">
-                                    <NuxtImg alt="image" width="160" height="60" class="mb-3" src="/images/payment-18.webp" />
+                                    <NuxtImg alt="image" width="160" height="60" class="mb-3"
+                                        src="/images/payment-18.webp" />
                                 </div>
                                 <div class="flex items-center justify-center">
                                     <input type="radio" value="option1" v-model="selectedOption1" class="radio-square"
@@ -304,7 +307,8 @@
                             @click="selectedOption1 = 'option2'">
                             <div class="m-8">
                                 <div class="object-contain max-w-full">
-                                    <NuxtImg alt="image" width="160" height="60" class="mb-3" src="/images/payment-3.webp" />
+                                    <NuxtImg alt="image" width="160" height="60" class="mb-3"
+                                        src="/images/payment-3.webp" />
                                 </div>
                                 <div class="flex items-center justify-center">
                                     <input type="radio" value="option2" v-model="selectedOption1" class="radio-square"
@@ -320,7 +324,8 @@
                             @click="selectedOption1 = 'option3'">
                             <div class="m-8">
                                 <div class="object-contain max-w-full">
-                                    <NuxtImg alt="image" width="160" height="60" class="mb-3" src="/images/payment-21.webp" />
+                                    <NuxtImg alt="image" width="160" height="60" class="mb-3"
+                                        src="/images/payment-21.webp" />
                                 </div>
                                 <div class="flex items-center justify-center">
                                     <input type="radio" value="option3" v-model="selectedOption1" class="radio-square"
@@ -361,57 +366,50 @@
     </div>
 </template>
 
-<script>
+<script setup>
 import { ref, onMounted, onBeforeUnmount } from 'vue';
-export default {
-    setup() {
-        const isDropdownOpen = ref(true);
 
-        const toggleDropdown = () => {
-            isDropdownOpen.value = !isDropdownOpen.value;
-        };
+// Biến trạng thái
+const isDropdownOpen = ref(true);
+const quantity = ref(1); // Giá trị khởi đầu của số lượng
+const selectedOption = ref(null); // Dùng để lưu trạng thái radio đã chọn
+const selectedOption1 = ref(null); // Dùng để lưu trạng thái radio đã chọn
+const someNumber = ref(2);
 
-        const handleClickOutside = (event) => {
-            const dropdownElement = document.querySelector('.dropdown');
-            if (dropdownElement && !dropdownElement.contains(event.target)) {
-                isDropdownOpen.value = false;
-            }
-        };
-
-        onMounted(() => {
-            document.addEventListener('click', handleClickOutside);
-        });
-
-        onBeforeUnmount(() => {
-            document.removeEventListener('click', handleClickOutside);
-        });
-
-        return {
-            isDropdownOpen,
-            toggleDropdown
-        };
-    },
-    data() {
-        return {
-            quantity: 1, // Giá trị khởi đầu của số lượng
-            selectedOption: null, // Dùng để lưu trạng thái radio đã chọn
-            selectedOption1: null, // Dùng để lưu trạng thái radio đã chọn
-            someNumber: 2,
-        };
-    },
-    methods: {
-        // Hàm cộng số lượng
-        increment() {
-            this.quantity++;
-        },
-        // Hàm trừ số lượng
-        decrement() {
-            if (this.quantity > 1) {
-                this.quantity--;
-            }
-        },
-    },
+// Hàm chuyển đổi trạng thái dropdown
+const toggleDropdown = () => {
+    isDropdownOpen.value = !isDropdownOpen.value;
 };
+
+// Hàm xử lý click bên ngoài dropdown
+const handleClickOutside = (event) => {
+    const dropdownElement = document.querySelector('.dropdown');
+    if (dropdownElement && !dropdownElement.contains(event.target)) {
+        isDropdownOpen.value = false;
+    }
+};
+
+// Hàm cộng số lượng
+const increment = () => {
+    quantity.value++;
+};
+
+// Hàm trừ số lượng
+const decrement = () => {
+    if (quantity.value > 1) {
+        quantity.value--;
+    }
+};
+
+// Thêm sự kiện click khi component được mounted
+onMounted(() => {
+    document.addEventListener('click', handleClickOutside);
+});
+
+// Xóa sự kiện click khi component bị unmounted
+onBeforeUnmount(() => {
+    document.removeEventListener('click', handleClickOutside);
+});
 </script>
 
 <style>

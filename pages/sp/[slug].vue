@@ -1,52 +1,88 @@
 <template>
-  <div>
-  <VNWAStepSlides :name="data.name" :steps="data.steps" />
-  </div>
+    <div>
+        <VNWAStepSlides :name="data.name" :steps="data.steps" />
+    </div>
 </template>
 
-<script  setup>
+<script setup>
 const data = {
-    "name" :"Các bước sử dụng",
+    "name": "1.Preparar las cutículas",
+    
     "steps": [
         {
-            "name":"1. Tạo lớp Sơn Lì",
-            "desc":"Descasd asdg asdg asdg asdg",
-            "products":[
+            "name": "1. Preparar las cutículas",
+            "slug": "Preparar-las-cutículas",
+            "desc": "Empujar las cutículas con un palito de naranjo. Dar la forma final a las uñas con una lima de gramaje 180.",
+            "image": "/images/image1.png",
+            "products": [
                 {
-                    "name":"may danh bong",
-                    "slug":"may-danh-bong",
-                    "image":"https://cdn.neonail.it/lp-edu/Links/step%20by%20step/Krok%204.png",
-                    "price":149
+                    "image": "/images/abc1.png",
+                    "title": "PALITOS DE NARANJO 10 UDS.",
+                    "price": 149
                 },
                 {
-                    "name":"may danh bong",
-                    "slug":"may-danh-bong",
-                    "image":"https://cdn.neonail.it/lp-edu/Links/step%20by%20step/Krok%204.png",
-                    "price":149
-                }
+                    "image": "/images/abc1.png",
+                    "title": "PALITOS DE NARANJO 10 UDS.",
+                    "price": 149
+                },
             ]
         },
         {
-            "name":"2. buoc 2",
-            "desc":"Descasd asdg asdg asdg asdg",
-            "products":[
+            "name": "2. Preparar las cutículas",
+            "slug": "Preparar-las-cutículas",
+            "desc": "Empujar las cutículas con un palito de naranjo. Dar la forma final a las uñas con una lima de gramaje 180.",
+            "image": "/images/image1.png",
+            "products": [
                 {
-                    "name":"may danh bong",
-                    "slug":"may-danh-bong",
-                    "image":"https://cdn.neonail.it/lp-edu/Links/step%20by%20step/Krok%204.png",
-                    "price":1000
-                }
+                    "image": "/images/abc1.png",
+                    "title": "PALITOS DE NARANJO 10 UDS.",
+                    "price": 149
+                },
+                {
+                    "image": "/images/abc1.png",
+                    "title": "PALITOS DE NARANJO 10 UDS.",
+                    "price": 149
+                },
+                {
+                    "image": "/images/abc1.png",
+                    "title": "PALITOS DE NARANJO 10 UDS.",
+                    "price": 149
+                },
+            ]
+        }, {
+            "name": "3. Preparar las cutículas",
+            "slug": "Preparar-las-cutículas",
+            "desc": "Empujar las cutículas con un palito de naranjo. Dar la forma final a las uñas con una lima de gramaje 180.",
+            "image": "/images/image1.png",
+            "products": [
+                {
+                    "image": "/images/abc1.png",
+                    "title": "PALITOS DE NARANJO 10 UDS.",
+                    "price": 149
+                },
+
             ]
         },
         {
-            "name":"3. buoc 3",
-            "desc":"descript buoc 3",
-            "products":[ ]
-        }
+            "name": "4. Preparar las cutículas",
+            "slug": "Preparar-las-cutículas",
+            "desc": "Empujar las cutículas con un palito de naranjo. Dar la forma final a las uñas con una lima de gramaje 180.",
+            "image": "/images/image1.png",
+            "products": [
+
+            ]
+        },
+        {
+            "name": "4. Preparar las cutículas",
+            "slug": "Preparar-las-cutículas",
+            "desc": "Empujar las cutículas con un palito de naranjo. Dar la forma final a las uñas con una lima de gramaje 180.",
+            "image": "/images/image1.png",
+            "products": [
+
+            ]
+        },
     ]
 };
 </script>
 
-<style>
-
-</style>
+<style></style>

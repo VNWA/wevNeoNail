@@ -1,59 +1,165 @@
-<template>
-    <div class="container mx-auto">
-        <div class="">
-            <swiper :pagination="false"
-                :style="{ '--swiper-navigation-color': 'black', '--swiper-pagination-color': 'black' }" :loop="true"
-                :spaceBetween="10" :navigation="true" :thumbs="{ swiper: thumbsSwiper }" :modules="modules"
-                class="mySwiper2">
-                <swiper-slide v-for="(item, index) in data" :key="index">
-                    <NuxtImg width="500" height="500" alt="product" :src="item.image" />
-                </swiper-slide>
-            </swiper>
-            <div class="">
-                <swiper :pagination="false" @swiper="setThumbsSwiper" :loop="true" :spaceBetween="10" :slidesPerView="5"
-                    :freeMode="true" :watchSlidesProgress="true" :modules="modules" class=" mySwiper">
-                    <swiper-slide v-for="(item, index) in data" :key="index">
-                        <div class="my-2 flex space-x-1 overflow-x-auto whitespace-nowrap relative pt-2">
-                            <div class="pb-5">
-                                <button to="/"
-                                    class="border border-gray-400 mr-2 text-black bg-white px-4 py-2 transition duration-300 hover:border-primary hover:text-primary">
-                                    Esmaltes
-                                </button>
+    <template>
+        <div class="container mx-auto">
+            <div class="lg:col-span-7 col-span-12">
+                <div class="">
+                    <div class="mt-8">
+                        <swiper :pagination="false" @swiper="setThumbsSwiper" :loop="true" :spaceBetween="10"
+                            :slidesPerView="slideShow" :freeMode="true" :watchSlidesProgress="true" :modules="modules"
+                            class="mySwiper">
+                            <swiper-slide v-for="(item, index) in steps" :key="index">
+                                <span @click="setActive(index)" :class="{
+                                    'active': activeIndex === index,
+                                    'border-primary text-primary': activeIndex === index,
+                                    'border-gray-400 text-black': activeIndex !== index
+                                }"
+                                    class="border w-full lg:text-base text-xs  lg:mr-2 bg-white lg:px-4 py-2 transition duration-300 cursor-pointer">
+                                    {{ item.name }}
+                                </span>
+                            </swiper-slide>
+                        </swiper>
+                    </div>
+                    <swiper :pagination="false"
+                        :style="{ '--swiper-navigation-color': '#feb2be', '--swiper-pagination-color': '#feb2be' }"
+                        :loop="true" :spaceBetween="10" :navigation="true" :thumbs="{ swiper: thumbsSwiper }"
+                        :modules="modules" class="mySwiper2">
+                        <swiper-slide v-for="(item, index) in steps" :key="index">
+                            <div class="lg:px-10 px-12 py-4">
+                                <div class="grid lg:grid-cols-2 gap-8">
+                                    <div>
+                                        <NuxtImg width="800" height="450" alt="product" :src="item.image" />
+                                    </div>
+                                    <div class="text-left lg:text-base text-2xl">
+                                        <div class="font-semibold text-2xl py-3">
+                                            {{ item.name }}
+                                        </div>
+                                        <div class="py-3 lg:text-base text-xl">
+                                            {{ item.desc }}
+                                        </div>
+                                        <div>
+                                            <div class="font-semibold lg:text-lg text-2xl py-4">Productos:</div>
+                                            <ul v-if="item.products.length">
+                                                <li v-for="(product, pIndex) in item.products" :key="pIndex">
+                                                    <div class="grid grid-cols-12">
+                                                        <div class="col-span-2">
+                                                            <img :src="product.image" :alt="product.name" width="100"
+                                                                height="100" />
+                                                        </div>
+                                                        <div class="text-left col-span-10 pl-3">
+                                                            <div class="lg:text-base text-xl">
+                                                                {{ product.title }}
+                                                            </div>
+                                                            <div class="text-primary lg:text-base text-xl">
+                                                                {{ product.price }} $
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                            <div v-else>Không có sản phẩm nào.</div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    </swiper-slide>
-                </swiper>
+                        </swiper-slide>
+                    </swiper>
+                </div>
             </div>
         </div>
-    </div>
-</template>
+    </template>
 
-<script setup>
-defineProps({
-    name: {
-        type: String,
-        default: ""
-    },
-    steps: {
-        type: Object,
-        default: {}
+
+    <script setup>
+    import { ref } from 'vue';
+    import { Swiper, SwiperSlide } from 'swiper/vue';
+    import { FreeMode, Navigation, Pagination, Thumbs } from 'swiper/modules';
+
+    const activeIndex = ref(0); // Khởi tạo activeIndex bằng 0 để trang số 1 luôn active
+    const thumbsSwiper = ref(null);
+
+    const setThumbsSwiper = (swiper) => {
+        thumbsSwiper.value = swiper;
+    };
+
+    // Cập nhật activeIndex khi click vào trang khác
+    const setActive = (index) => {
+        activeIndex.value = index; 
+    };
+
+    defineProps({
+        name: {
+            type: String,
+            default: ""
+        },
+        steps: {
+            type: Array,
+            default: () => []
+        },
+        slideShow :{
+            type: Number,
+            default: 5
+        }
+    });
+
+    const modules = [FreeMode, Navigation, Thumbs, Pagination];
+    </script>
+
+
+    <style scoped>
+    .active {
+        color: #feb2be;
+        border-color: #feb2be;
     }
-})
-import { Swiper, SwiperSlide } from 'swiper/vue';
-import 'swiper/css';
-import 'swiper/css/free-mode';
-import 'swiper/css/navigation';
-import 'swiper/css/thumbs';
-import { FreeMode, Navigation, Pagination, Thumbs } from 'swiper/modules';
-const thumbsSwiper = ref(null);
-const setThumbsSwiper = (swiper) => {
-    thumbsSwiper.value = swiper;
-};
 
-const modules = [FreeMode, Navigation, Thumbs, Pagination];
+    .swiper {
+        width: 100%;
+        height: 300px;
+        margin-left: auto;
+        margin-right: auto;
+    }
 
+    .mySwiper2 {
+        height: 80%;
+        width: 100%;
+    }
 
+    .mySwiper {
+        height: 20%;
+        padding: 10px 0;
+    }
 
-</script>
+    .mySwiper .swiper-slide {
+        width: 25%;
+        height: 100%;
+        opacity: 0.7;
+        cursor: pointer;
+    }
 
-<style></style>
+    .mySwiper .swiper-slide-thumb-active {
+        opacity: 1;
+    }
+
+    .swiper-slide NuxtImg {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .swiper-pagination-bullet {
+        opacity: 1;
+    }
+
+    .swiper-pagination-bullet-active {
+        background: #feb2be;
+        border: 1px solid black;
+    }
+    /* CSS cho cuộn ngang */
+    .overflow-x-auto {
+        overflow-x: auto; /* Bật cuộn ngang */
+        white-space: nowrap; /* Ngăn không cho các phần tử bên trong bị xuống dòng */
+    }
+
+    .flex {
+        display: flex; /* Thiết lập chế độ hiển thị thành flex */
+    }
+    </style>
