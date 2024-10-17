@@ -17,12 +17,12 @@
         <div class="grid grid-cols-10 justify-center items-center lg:hidden">
           <div class="col-span-1 flex justify-center"><span class="text-xl">1</span></div>
           <div class="col-span-2 flex justify-center mr-4">
-            <NuxtLink to="/p/a">
+            <NuxtLink aria-label="VNWA Link" to="/p/a">
               <NuxtImg alt="product" width="100" height="100" src="/images/36.webp" />
             </NuxtLink>
           </div>
           <div class="col-span-6">
-            <NuxtLink to="/p/a">
+            <NuxtLink aria-label="VNWA Link" to="/p/a">
               <h3 class="text-lg mb-1">Gel Polish - 7,2 ml - Crazy Idea</h3>
               <p class="text-sm">9926-7</p>
             </NuxtLink>
@@ -211,14 +211,14 @@
         </div>
         <div class="flex justify-between items-center mt-10">
                 <div class="">
-                    <NuxtLink to="/order/info"
+                    <NuxtLink aria-label="VNWA Link" to="/order/info"
                         class="border text-xl border-gray-400 mr-2 text-black bg-white px-5 py-3 transition duration-300 hover:border-primary hover:text-primary">
                         Atrás
                         Cesta
                     </NuxtLink>
                 </div>
                 <div class="">
-                    <NuxtLink to="/"
+                    <NuxtLink aria-label="VNWA Link" to="/"
                         class=" text-xl mr-2 text-white bg-primary px-5 py-3 transition duration-300 hover:bg-rose-300 ">
                         Adelante
                     </NuxtLink>

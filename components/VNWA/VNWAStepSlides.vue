@@ -41,7 +41,7 @@
                                                 <li v-for="(product, pIndex) in item.products" :key="pIndex">
                                                     <div class="grid grid-cols-12">
                                                         <div class="col-span-2">
-                                                            <img :src="product.image" :alt="product.name" width="100"
+                                                            <NuxtImg :src="product.image" alt="product" width="100"
                                                                 height="100" />
                                                         </div>
                                                         <div class="text-left col-span-10 pl-3">

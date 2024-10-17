@@ -8,7 +8,7 @@
             <Icon class="text-xl" name="solar:phone-outline" />
           </div>
           <div class="mr-8 z-50">
-            <NuxtLink to="/" class="hover:opacity-75">
+            <NuxtLink aria-label="VNWA Link" to="/" class="hover:opacity-75">
               +34931727651
             </NuxtLink>
           </div>
@@ -17,10 +17,10 @@
           </div>
         </div>
         <div class="text-right">
-          <NuxtLink to="/ask" class=" uppercase hover:opacity-75">
+          <NuxtLink aria-label="VNWA Link" to="/ask" class=" uppercase hover:opacity-75">
             Questions & Answers
           </NuxtLink>
-          <NuxtLink to="/gift" class="ml-16 uppercase hover:opacity-75">
+          <NuxtLink aria-label="VNWA Link" to="/gift" class="ml-16 uppercase hover:opacity-75">
             Gift ideas
           </NuxtLink>
         </div>
@@ -31,7 +31,7 @@
         <div class="grid grid-cols-2 py-4 text-center container lg:mx-auto justify-center items-center">
           <!-- Logo Section -->
           <div class=" flex justify-start items-center w-full lg:w-3/4">
-            <NuxtLink to="/">
+            <NuxtLink aria-label="VNWA Link" to="/">
               <NuxtImg alt="logo" width="260px" height="64px" class="bg-black" src="/images/logo.webp" />
             </NuxtLink>
           </div>
@@ -46,7 +46,7 @@
               </div>
               <div :class="{ 'search-menu_desktop': true, 'active': isSearchOpen }"
                 class="absolute w-full h-auto bg-white top-8 z-50 border search-menu_desktop">
-                <NuxtLink to="/p/a">
+                <NuxtLink aria-label="VNWA Link" to="/p/a">
                   <div class="grid grid-cols-10 border-b">
                     <div class="col-span-2 flex items-center justify-center px-2 ">
                       <NuxtImg alt="product" width="80" height="80" src="/images/22.webp" />
@@ -66,10 +66,10 @@
               </button>
             </div>
             <div class="lg:flex items-center space-x-6 lg:ml-5 ml-20 hidden">
-              <NuxtLink to="/login">
+              <NuxtLink aria-label="VNWA Link" to="/login">
                 <Icon name="ph:user-light" class="hover:opacity-70 w-6 h-6 cursor-pointer" />
               </NuxtLink>
-              <NuxtLink class="relative" to="/favourite">
+              <NuxtLink aria-label="VNWA Link" class="relative" to="/favourite">
                 <Icon class="hover:opacity-70 w-7 h-7 cursor-pointer hidden lg:block "
                   name="material-symbols-light:favorite-outline" />
                 <span
@@ -93,7 +93,7 @@
               <li class="mx-12 py-2 my-2 text-white px-4 flex justify-center items-center "
                 style="background-color: #640202;">Autumn Colors</li>
               <li class="mx-12 py-4 font-medium"> <span class="pb-4">
-                  <NuxtLink to="/products" class="under-line">Nail Polishes</NuxtLink>
+                  <NuxtLink aria-label="VNWA Link" to="/products" class="under-line">Nail Polishes</NuxtLink>
                 </span>
                 <div class="nav-dropdown absolute bg-white ">
                   <div class="container mx-auto py-5">
@@ -114,7 +114,7 @@
                 </div>
               </li>
               <li class="mx-12 py-4 font-medium"> <span class="pb-4">
-                  <NuxtLink to="/products" class="under-line">Manicure</NuxtLink>
+                  <NuxtLink aria-label="VNWA Link" to="/products" class="under-line">Manicure</NuxtLink>
                 </span>
                 <div class="nav-dropdown absolute  bg-white ">
                   <div class="container mx-auto py-5">
@@ -137,7 +137,7 @@
                 </div>
               </li>
               <li class="mx-12 py-4 font-medium"> <span class="pb-4">
-                  <NuxtLink to="/products" class="under-line">Kits</NuxtLink>
+                  <NuxtLink aria-label="VNWA Link" to="/products" class="under-line">Kits</NuxtLink>
                 </span>
                 <div class="nav-dropdown absolute  bg-white ">
                   <div class="container mx-auto py-5">
@@ -158,7 +158,7 @@
                 </div>
               </li>
               <li class="mx-12 py-4 font-medium"> <span class="pb-4">
-                  <NuxtLink to="/products" class="under-line">Outlet
+                  <NuxtLink aria-label="VNWA Link" to="/products" class="under-line">Outlet
                   </NuxtLink>
                 </span>
                 <div class="nav-dropdown absolute  bg-white ">
@@ -180,7 +180,7 @@
                 </div>
               </li>
               <li class="mx-12 py-4 font-medium"> <span class="pb-4">
-                  <NuxtLink to="/sp/a" class="under-line">APRENDE CON NOSOTROS</NuxtLink>
+                  <NuxtLink aria-label="VNWA Link" to="/sp/a" class="under-line">APRENDE CON NOSOTROS</NuxtLink>
                 </span>
                 <div class="nav-dropdown absolute  bg-white ">
                   <div class="container mx-auto py-5">
@@ -345,7 +345,7 @@
           Tổng cộng: <b class="lg:text-2xl text-3xl ">7999$</b>
         </div>
         <div>
-          <NuxtLink to="/order/cart"
+          <NuxtLink aria-label="VNWA Link" to="/order/cart"
             class="w-full block text-center border-black py-3 text-white bg-black text-lg mt-3 font-medium hover:bg-white hover:text-black border-solid border duration-500">
             XEM
             GIỎ HÀNG</NuxtLink>
@@ -394,7 +394,7 @@
       <ul class="divide-y mt-20 ml-5 divide-gray-200">
         <li v-for="(item, index) in menuItems" :key="index" class="pb-2">
           <div class="flex items-center justify-between">
-            <NuxtLink to="/" class="block py-2 text-2xl transition duration-300 ease-in-out ">
+            <NuxtLink aria-label="VNWA Link" to="/" class="block py-2 text-2xl transition duration-300 ease-in-out ">
               {{ item.name }}
             </NuxtLink>
             <!-- Menu con hiển thị khi click -->
@@ -420,20 +420,20 @@
         <button @click="  isMenuOpen = !isMenuOpen" :class="{ 'text-primary': isMenuOpen }">
           <Icon class="text-3xl" name="gravity-ui:bars-unaligned" />
         </button>
-        <NuxtLink to="">
+        <NuxtLink aria-label="VNWA Link" to="/">
           <Icon class="text-4xl" name="material-symbols-light:favorite-outline" />
         </NuxtLink>
-        <NuxtLink to="">
+        <NuxtLink aria-label="VNWA Link" to="/">
           <Icon class="text-4xl" name="ph:house-thin" />
         </NuxtLink>
-        <NuxtLink @click="isCartOpen = !isCartOpen" to="">
+        <NuxtLink aria-label="VNWA Link" @click="isCartOpen = !isCartOpen" to="/">
           <div class="relative">
             <Icon class="text-3xl" name="ph:handbag-simple-light" />
             <span
               class="w-5 h-5 flex items-center justify-center rounded-full bg-black text-white absolute -top-1 -right-1 text-xs">0</span>
           </div>
         </NuxtLink>
-        <NuxtLink to="">
+        <NuxtLink aria-label="VNWA Link" to="/">
           <Icon class="text-4xl" name="ic:baseline-manage-accounts" />
         </NuxtLink>
       </div>

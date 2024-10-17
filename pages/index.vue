@@ -3,7 +3,7 @@
     <div class="container mx-auto">
       <!-- Desktop Banner -->
       <div class="w-full hidden lg:block">
-        <NuxtLink to="/products" class="flex justify-center items-center">
+        <NuxtLink aria-label="VNWA Link" to="/products" class="flex justify-center items-center">
           <NuxtImg
             :alt="'Banner chính - Desktop'"
             :width="1600"
@@ -16,7 +16,7 @@
 
       <!-- Mobile Banner -->
       <div class="lg:hidden mt-1">
-        <NuxtLink to="/products">
+        <NuxtLink aria-label="VNWA Link" to="/products">
           <NuxtImg
             :alt="'Banner chính - Mobile'"
             :width="410"
@@ -39,7 +39,7 @@
           }"
         >
           <SwiperSlide v-for="(image, index) in images.productImages" :key="index">
-            <NuxtLink class="w-full h-full" to="/products">
+            <NuxtLink aria-label="VNWA Link" class="w-full h-full" to="/products">
               <NuxtImg
                 :alt="'Hình ảnh sản phẩm ' + (index + 1)"
                 class="w-full h-auto object-cover"
@@ -69,7 +69,7 @@
           <HomeSlideOne :data="SliderList" />
         </div>
         <div>
-          <NuxtLink to="/products">
+          <NuxtLink aria-label="VNWA Link" to="/products">
             <NuxtImg
               :alt="'Hình ảnh sản phẩm chủ đạo'"
               :width="800"
@@ -92,7 +92,7 @@
       <!-- Instagram Section -->
       <div class="custom-underline mt-4">Follow @neonailespana on the Instagram Community</div>
       <div class="flex mt-3 mb-5">
-        <NuxtLink v-for="(icon, index) in instagramLinks" :key="index" class="mx-1" to="/">
+        <NuxtLink aria-label="VNWA Link" v-for="(icon, index) in instagramLinks" :key="index" class="mx-1" to="/">
           <div class="w-10 h-10 cursor-pointer border border-black bg-white text-black rounded-full flex justify-center items-center text-lg font-bold hover:bg-black hover:text-white transition-colors duration-300">
             <Icon name="bi:instagram"></Icon>
           </div>

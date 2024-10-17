@@ -57,57 +57,64 @@
       <div class="grid lg:grid-cols-4 grid-cols-1">
         <div class="mr-7">
           <ul>
-            <li class="pb-3 font-medium">INFORMATION</li>
-            <hr>
+            <li class="pb-3 font-medium border-b mb-3">INFORMATION</li>
             <li class="py-2">
-              <NuxtLink to="/" class="hover:underline cursor-pointer text-sm	">Contact</NuxtLink>
+              <NuxtLink aria-label="VNWA Link" to="/" class="hover:underline cursor-pointer text-sm	">Contact</NuxtLink>
             </li>
             <li class="py-1">
-              <NuxtLink to="/" class="hover:underline cursor-pointer text-sm	">Returns and complaints</NuxtLink>
+              <NuxtLink aria-label="VNWA Link" to="/" class="hover:underline cursor-pointer text-sm	">Returns and
+                complaints</NuxtLink>
             </li>
             <li class="py-1">
-              <NuxtLink to="/" class="hover:underline cursor-pointer text-sm	">Order tracking</NuxtLink>
-            </li>
-            <li class="py-1">
-              <NuxtLink to="/" class="hover:underline cursor-pointer text-sm	">Payment and shipping</NuxtLink>
-            </li>
-            <li class="py-1">
-              <NuxtLink to="/" class="hover:underline cursor-pointer text-sm	">Press</NuxtLink>
-            </li>
-          </ul>
-        </div>
-        <div class="mr-7">
-          <ul>
-            <li class="pb-3 font-medium">ONLINE STORE</li>
-            <hr>
-            <li class="py-2">
-              <NuxtLink to="/" class="hover:underline cursor-pointer text-sm	">Terms of use</NuxtLink>
-            </li>
-            <li class="py-1">
-              <NuxtLink to="/" class="hover:underline cursor-pointer text-sm	">Data protection</NuxtLink>
-            </li>
-            <li class="py-1">
-              <NuxtLink to="/" class="hover:underline cursor-pointer text-sm	">Regulations</NuxtLink>
-            </li>
-            <li class="py-1">
-              <NuxtLink to="/" class="hover:underline cursor-pointer text-sm	">Drying times</NuxtLink>
-            </li>
-            <li class="py-1">
-              <NuxtLink to="/" class="hover:underline cursor-pointer text-sm	">Compare semi-permanent bases
+              <NuxtLink aria-label="VNWA Link" to="/" class="hover:underline cursor-pointer text-sm	">Order tracking
               </NuxtLink>
             </li>
             <li class="py-1">
-              <NuxtLink to="/" class="hover:underline cursor-pointer text-sm	">Get inspired</NuxtLink>
+              <NuxtLink aria-label="VNWA Link" to="/" class="hover:underline cursor-pointer text-sm	">Payment and
+                shipping</NuxtLink>
             </li>
             <li class="py-1">
-              <NuxtLink to="/" class="hover:underline cursor-pointer text-sm	">Cookie settings</NuxtLink>
+              <NuxtLink aria-label="VNWA Link" to="/" class="hover:underline cursor-pointer text-sm	">Press</NuxtLink>
             </li>
           </ul>
         </div>
         <div class="mr-7">
           <ul>
-            <li class="pb-3 font-medium">DELIVERY FROM 4,90 €</li>
-            <hr>
+            <li class="pb-3 font-medium border-b mb-3">ONLINE STORE</li>
+            <li class="py-2">
+              <NuxtLink aria-label="VNWA Link" to="/" class="hover:underline cursor-pointer text-sm	">Terms of use
+              </NuxtLink>
+            </li>
+            <li class="py-1">
+              <NuxtLink aria-label="VNWA Link" to="/" class="hover:underline cursor-pointer text-sm	">Data protection
+              </NuxtLink>
+            </li>
+            <li class="py-1">
+              <NuxtLink aria-label="VNWA Link" to="/" class="hover:underline cursor-pointer text-sm	">Regulations
+              </NuxtLink>
+            </li>
+            <li class="py-1">
+              <NuxtLink aria-label="VNWA Link" to="/" class="hover:underline cursor-pointer text-sm	">Drying times
+              </NuxtLink>
+            </li>
+            <li class="py-1">
+              <NuxtLink aria-label="VNWA Link" to="/" class="hover:underline cursor-pointer text-sm	">Compare
+                semi-permanent bases
+              </NuxtLink>
+            </li>
+            <li class="py-1">
+              <NuxtLink aria-label="VNWA Link" to="/" class="hover:underline cursor-pointer text-sm	">Get inspired
+              </NuxtLink>
+            </li>
+            <li class="py-1">
+              <NuxtLink aria-label="VNWA Link" to="/" class="hover:underline cursor-pointer text-sm	">Cookie settings
+              </NuxtLink>
+            </li>
+          </ul>
+        </div>
+        <div class="mr-7">
+          <ul>
+            <li class="pb-3 font-medium border-b mb-3">DELIVERY FROM 4,90 €</li>
             <li class="py-4 grid grid-cols-4 gap-3 ">
               <div class=" h-16 border border-black/50 flex items-center justify-center bg-white px-3">
                 <NuxtImg alt="image" width="100" class="w-full h-auto" src="/images/1.webp" />
@@ -147,8 +154,7 @@
         </div>
         <div class="mr-7">
           <ul>
-            <li class="pb-3 font-medium">Contact</li>
-            <hr>
+            <li class="pb-3 font-medium border-b mb-3">Contact</li>
             <li class="py-3">
               tel: +34 931727651
             </li>
@@ -166,7 +172,9 @@
               </button>
             </li>
             <li class="py-2">
-              <NuxtImg width="auto" height="100" src="/images/1.svg" />
+              <NuxtLink to="/">
+                <NuxtImg width="auto" height="100" src="/images/1 (1).png" />
+              </NuxtLink>
             </li>
           </ul>
         </div>

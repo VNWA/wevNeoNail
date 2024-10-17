@@ -1,6 +1,6 @@
 <template>
     <div>
-        <NuxtLink to="/" class="mx-2 relative inline-block text-black bg-white px-2 py-1 group">
+        <NuxtLink aria-label="VNWA Link" to="/" class="mx-2 relative inline-block text-black bg-white px-2 py-1 group">
             <!-- Đường viền tròn màu hồng -->
             <p
                 class="absolute inset-0 rounded-full border border-primary opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-100"></p>
@@ -10,7 +10,7 @@
                     class="block transition-opacity duration-300 ease-in-out group-hover:opacity-100" />
             </p>
         </NuxtLink>
-        <NuxtLink to="/" class="mx-2 relative inline-block text-black bg-white px-2 py-1 group">
+        <NuxtLink aria-label="VNWA Link" to="/" class="mx-2 relative inline-block text-black bg-white px-2 py-1 group">
             <!-- Đường viền tròn màu hồng -->
             <p
                 class="absolute inset-0 rounded-full border border-primary opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-100"></p>
@@ -20,7 +20,7 @@
                     class="block transition-opacity duration-300 ease-in-out group-hover:opacity-100" />
             </p>
         </NuxtLink>
-        <NuxtLink to="/" class="mx-2 relative inline-block text-black bg-white px-2 py-1 group">
+        <NuxtLink aria-label="VNWA Link" to="/" class="mx-2 relative inline-block text-black bg-white px-2 py-1 group">
             <!-- Đường viền tròn màu hồng -->
             <p
                 class="absolute inset-0 rounded-full border border-primary opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-100"></p>
@@ -30,7 +30,7 @@
                     class="block transition-opacity duration-300 ease-in-out group-hover:opacity-100" />
             </p>
         </NuxtLink>
-        <NuxtLink to="/" class="mx-2 relative inline-block text-black bg-white px-2 py-1 group">
+        <NuxtLink aria-label="VNWA Link" to="/" class="mx-2 relative inline-block text-black bg-white px-2 py-1 group">
             <!-- Đường viền tròn màu hồng -->
             <p
                 class="absolute inset-0 rounded-full border border-primary opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-100"></p>
@@ -40,7 +40,7 @@
                     class="block transition-opacity duration-300 ease-in-out group-hover:opacity-100" />
             </p>
         </NuxtLink>
-        <NuxtLink to="/" class="mx-2 relative inline-block text-black bg-white px-2 py-1 group">
+        <NuxtLink aria-label="VNWA Link" to="/" class="mx-2 relative inline-block text-black bg-white px-2 py-1 group">
             <!-- Đường viền tròn màu hồng -->
             <p
                 class="absolute inset-0 rounded-full border border-primary opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-100"></p>
@@ -50,7 +50,7 @@
                     class="block transition-opacity duration-300 ease-in-out group-hover:opacity-100" />
             </p>
         </NuxtLink>
-        <NuxtLink to="/" class="mx-2 relative inline-block text-black bg-white px-2 py-1 group">
+        <NuxtLink aria-label="VNWA Link" to="/" class="mx-2 relative inline-block text-black bg-white px-2 py-1 group">
             <!-- Đường viền tròn màu hồng -->
             <p
                 class="absolute inset-0 rounded-full border border-primary opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-100"></p>
@@ -60,7 +60,7 @@
                     class="block transition-opacity duration-300 ease-in-out group-hover:opacity-100" />
             </p>
         </NuxtLink>
-        <NuxtLink to="/" class="mx-2 relative inline-block text-black bg-white px-2 py-1 group">
+        <NuxtLink aria-label="VNWA Link" to="/" class="mx-2 relative inline-block text-black bg-white px-2 py-1 group">
             <!-- Đường viền tròn màu hồng -->
             <p
                 class="absolute inset-0 rounded-full border border-primary opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-100"></p>

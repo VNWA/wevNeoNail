@@ -32,18 +32,18 @@
                         1
                     </th>
                     <td class="pr-6 py-4">
-                        <NuxtLink to="/p/a">
+                        <NuxtLink aria-label="VNWA Link" to="/p/a">
                             <NuxtImg alt="product" width="100" height="100" :src="item.image" />
                         </NuxtLink>
                     </td>
                     <td class="px-6 py-4">
                         <p class="mt-4">
-                            <NuxtLink class="text-xl" to="/p/a">
+                            <NuxtLink aria-label="VNWA Link" class="text-xl" to="/p/a">
                                 {{ item.name }}
                             </NuxtLink>
                         </p>
                         <p>
-                            <NuxtLink class="text-sm" to="/p/a">
+                            <NuxtLink aria-label="VNWA Link" class="text-sm" to="/p/a">
                                 {{ item.code }}
                             </NuxtLink>
                         </p>

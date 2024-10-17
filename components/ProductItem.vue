@@ -13,7 +13,7 @@
         </div>
         <div class="content relative">
             <div class=" block group-hover:hidden">
-                <NuxtLink to="/p/teo-dep-trai">
+                <NuxtLink aria-label="VNWA Link" to="/p/teo-dep-trai">
                     <div class="flex items-center justify-center">
                         <NuxtImg alt="product" :src="dataPro.image[0]" class="default-image"
                             v-if="dataPro.image.length > 0" width="200" height="200" />
@@ -53,7 +53,7 @@
                     :slides-per-view="1" :autoplay="true" :loop="true" :navigation="true" effect="fade">
                     <!-- Lướt qua các ảnh trong mảng (bắt đầu từ phần tử thứ 2 để khác ảnh mặc định) -->
                     <SwiperSlide v-for="(image, index) in dataPro.image.slice(1)" :key="index">
-                        <NuxtLink to="/p/teo-dep-trai">
+                        <NuxtLink aria-label="VNWA Link" to="/p/teo-dep-trai">
                             <div class="relative">
                                 <div class="absolute top-0 left-0 w-full h-full z-10"></div>
                                 <NuxtPicture :src="image"

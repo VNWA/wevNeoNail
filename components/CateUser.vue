@@ -5,7 +5,7 @@
                 <div class="font-bold text-3xl">Mi cuenta</div>
                 <ul class="pt-5">
                     <li class="border-b py-3" v-for="(item, index) in menuItems" :key="index">
-                        <NuxtLink
+                        <NuxtLink aria-label="VNWA Link"
                             class="py-2 flex items-center gap-3"
                             :to="item.link"
                             exact-active-class="active"

@@ -35,18 +35,18 @@
                             1
                         </th>
                         <td class="pr-6 py-4">
-                            <NuxtLink to="/p/a">
+                            <NuxtLink aria-label="VNWA Link" to="/p/a">
                                 <NuxtImg alt="product" width="100" height="100" src="/images/22.webp" />
                             </NuxtLink>
                         </td>
                         <td class="px-6 py-4">
                             <p class="mt-4">
-                                <NuxtLink class="text-xl" to="/p/a">
+                                <NuxtLink aria-label="VNWA Link" class="text-xl" to="/p/a">
                                     Datos de comprador
                                 </NuxtLink>
                             </p>
                             <p>
-                                <NuxtLink class="text-sm" to="/p/a">
+                                <NuxtLink aria-label="VNWA Link" class="text-sm" to="/p/a">
                                     9926-7
                                 </NuxtLink>
                             </p>
@@ -103,12 +103,12 @@
             <div class="grid grid-cols-10 justify-center items-center lg:hidden">
                 <div class="col-span-1 flex justify-center"><span class="text-xl">1</span></div>
                 <div class="col-span-2 flex justify-center mr-4">
-                    <NuxtLink to="/p/a">
+                    <NuxtLink aria-label="VNWA Link" to="/p/a">
                         <NuxtImg alt="product" width="100" height="100" src="/images/36.webp" />
                     </NuxtLink>
                 </div>
                 <div class="col-span-6">
-                    <NuxtLink to="/p/a">
+                    <NuxtLink aria-label="VNWA Link" to="/p/a">
                         <h3 class="text-lg mb-1">Gel Polish - 7,2 ml - Crazy Idea</h3>
                         <p class="text-sm">9926-7</p>
                     </NuxtLink>

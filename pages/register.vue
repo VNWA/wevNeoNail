@@ -130,7 +130,7 @@
           <div class="my-2">
             <div class="text-sm">
               Crear cuenta a la hora de compra.
-              <NuxtLink to="/" class="underline text-primary text-sm">
+              <NuxtLink aria-label="VNWA Link" to="/" class="underline text-primary text-sm">
                 ¿Por qué merece la pena tener una cuenta?
               </NuxtLink>
             </div>
@@ -163,7 +163,7 @@
             </p>
           </div>
           <div class="my-2">
-            <NuxtLink class="text-sm" to="">
+            <NuxtLink aria-label="VNWA Link" class="text-sm" to="/">
               Reglas de protección de datos personales
             </NuxtLink>
           </div>

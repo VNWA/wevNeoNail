@@ -22,10 +22,10 @@
           <div class="text-sm">
             <span class="text-primary">*</span> - campos obligatorios
             <div class="my-1">
-              <NuxtLink class="text-primary underline" to="/register">Crear cuenta</NuxtLink>
+              <NuxtLink aria-label="VNWA Link" class="text-primary underline" to="/register">Crear cuenta</NuxtLink>
             </div>
             <div>
-              <NuxtLink class="text-primary underline" to="/forgot">Recordar contraseña</NuxtLink>
+              <NuxtLink aria-label="VNWA Link" class="text-primary underline" to="/forgot">Recordar contraseña</NuxtLink>
             </div>
           </div>
           <div>

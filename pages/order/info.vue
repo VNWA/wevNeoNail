@@ -158,14 +158,14 @@
             </div>
             <div class="flex justify-between items-center mt-10">
                 <div class="">
-                    <NuxtLink to="/order/cart"
+                    <NuxtLink aria-label="VNWA Link" to="/order/cart"
                         class="border text-xl border-gray-400 mr-2 text-black bg-white px-5 py-3 transition duration-300 hover:border-primary hover:text-primary">
                         Atrás
                         Cesta
                     </NuxtLink>
                 </div>
                 <div class="">
-                    <NuxtLink to="/order/confirm"
+                    <NuxtLink aria-label="VNWA Link" to="/order/confirm"
                         class=" text-xl mr-2 text-white bg-primary px-5 py-3 transition duration-300 hover:bg-rose-300 ">
                         Adelante
                     </NuxtLink>

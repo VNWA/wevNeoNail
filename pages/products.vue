@@ -11,23 +11,23 @@
     </div>
     <div class="my-2 flex space-x-1 overflow-x-auto whitespace-nowrap relative pt-2">
       <div class="pb-5">
-        <NuxtLink to="/"
+        <NuxtLink aria-label="VNWA Link" to="/"
           class="border border-gray-400 mr-2 text-black bg-white px-4 py-2 transition duration-300 hover:border-primary hover:text-primary">
           Esmaltes
         </NuxtLink>
-        <NuxtLink to="/"
+        <NuxtLink aria-label="VNWA Link" to="/"
           class="border border-gray-400 mr-2 text-black bg-white px-4 py-2 transition duration-300 hover:border-primary hover:text-primary">
           Esmaltes
         </NuxtLink>
-        <NuxtLink to="/"
+        <NuxtLink aria-label="VNWA Link" to="/"
           class="border border-gray-400 mr-2 text-black bg-white px-4 py-2 transition duration-300 hover:border-primary hover:text-primary">
           Esmaltes
         </NuxtLink>
-        <NuxtLink to="/"
+        <NuxtLink aria-label="VNWA Link" to="/"
           class="border border-gray-400 mr-2 text-black bg-white px-4 py-2 transition duration-300 hover:border-primary hover:text-primary">
           Esmaltes
         </NuxtLink>
-        <NuxtLink to="/"
+        <NuxtLink aria-label="VNWA Link" to="/"
           class="border border-gray-400 mr-2 text-black bg-white px-4 py-2 transition duration-300 hover:border-primary hover:text-primary">
           Esmaltes
         </NuxtLink>
@@ -44,14 +44,14 @@
             <span class="uppercase lg:text-sm text-lg mx-2 pb-1">
               mostrar
             </span>
-            <NuxtLink class="block lg:border-b pb-1 border-gray-300 mx-2" to="/">
+            <NuxtLink aria-label="VNWA Link" class="block lg:border-b pb-1 border-gray-300 mx-2" to="/">
               <div class="flex justify-center items-center">
                 <span class="lg:text-sm text-lg">30</span>
                 <Icon name="material-symbols-light:keyboard-arrow-down" class="text-2xl text-gray-500" />
               </div>
             </NuxtLink>
           </div>
-          <NuxtLink class="block border-b pb-1 border-gray-300 mx-2" to="/">
+          <NuxtLink aria-label="VNWA Link" class="block border-b pb-1 border-gray-300 mx-2" to="/">
             <div class="flex justify-center items-center">
               <span class="lg:text-sm text-lg">ordenar por defecto</span>
               <Icon name="material-symbols-light:keyboard-arrow-down " class="text-2xl text-gray-500" />
@@ -77,7 +77,7 @@
       </div>
       <div class="text-right hidden lg:flex justify-end">
         <div class="flex justify-center items-center uppercase">
-          <NuxtLink class="block mx-2" to="/">
+          <NuxtLink aria-label="VNWA Link" class="block mx-2" to="/">
             <div class="flex justify-center items-center">
               <span class="text-sm	mr-2">Cobertura
               </span>
@@ -86,7 +86,7 @@
               </div>
             </div>
           </NuxtLink>
-          <NuxtLink class="block mx-2" to="/">
+          <NuxtLink aria-label="VNWA Link" class="block mx-2" to="/">
             <div class="flex justify-center items-center">
               <span class="text-sm	mr-2">Cobertura
               </span>
@@ -95,7 +95,7 @@
               </div>
             </div>
           </NuxtLink>
-          <NuxtLink class="block mx-2" to="/">
+          <NuxtLink aria-label="VNWA Link" class="block mx-2" to="/">
             <div class="flex justify-center items-center">
               <span class="text-sm	mr-2">Cobertura
               </span>
@@ -125,11 +125,11 @@
       <p class="text-sm	">Los mejores productos para manicura los encontrarás en NEONAIL.
         Somos expertos en uñas y prueba de ellos son todas nuestras colecciones y productos.
         En nuestra Web podrás comprar productos para manicura online al mejor precio y para diferentes niveles, ya que,
-        también contamos con productos y <NuxtLink class="text-primary underline hover:opacity-80" to="/">kits para
+        también contamos con productos y <NuxtLink aria-label="VNWA Link" class="text-primary underline hover:opacity-80" to="/">kits para
           principiantes.</NuxtLink>
-        ¿A qué esperas para conocerlos y descubrir nuestras colecciones de <NuxtLink
+        ¿A qué esperas para conocerlos y descubrir nuestras colecciones de <NuxtLink aria-label="VNWA Link"
           class="text-primary underline hover:opacity-80" to="/">esmaltes semipermanentes
-        </NuxtLink> y <NuxtLink class="text-primary underline hover:opacity-80" to="/">esmaltes clásicos?</NuxtLink>
+        </NuxtLink> y <NuxtLink aria-label="VNWA Link" class="text-primary underline hover:opacity-80" to="/">esmaltes clásicos?</NuxtLink>
       </p>
     </div>
   </div>

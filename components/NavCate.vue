@@ -4,7 +4,7 @@
     <!-- Lặp qua từng phần tử trong subCategories -->
     <li v-for="(subItem, index) in subCategories" :key="index"
       class="text-sm hover:opacity-70 py-1 text-gray-950 font-extralight">
-      <NuxtLink to ="/">
+      <NuxtLink aria-label="VNWA Link" to ="/">
         {{ subItem }}
       </NuxtLink>
     </li>
