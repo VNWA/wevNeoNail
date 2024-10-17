@@ -61,8 +61,8 @@
         </div>
       </div>
     </div>
-    <div class="my-2 lg:grid grid-cols-2 justify-between items-center left-0 sticky top-[159px] bg-white z-40">
-      <div class="lg:flex">
+    <div class="my-2 lg:grid grid-cols-2 justify-between items-center left-0 sticky lg:top-[159px] top-[74px] bg-white z-10">
+      <div class="lg:flex   py-2">
         <span class="uppercase text-2xl lg:text-lg font-medium lg:flex justify-center items-center">Tono:</span>
         <div class="hidden lg:block">
           <ProductManicura />

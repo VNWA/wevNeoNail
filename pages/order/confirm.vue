@@ -11,94 +11,7 @@
         <span class="text-4xl bg-white px-8">Cesta</span>
       </div>
       <div class="relative overflow-x-auto lg:block hidden">
-        <table class="w-full text-left rtl:text-right">
-          <thead class="uppercase border-b">
-            <tr>
-              <th scope="col" class="px-6 py-3 font-light text-sm">
-                N
-              </th>
-              <th scope="col" class="pr-6 py-3 font-light text-sm">
-                Foto
-              </th>
-              <th scope="col" class="px-6 py-3 font-light text-sm">
-                Producto
-              </th>
-              <th scope="col" class="px-6 py-3 font-light text-sm">
-                Precio bruto
-              </th>
-              <th scope="col" class="px-6 py-3 font-light text-sm">
-                Cantidad
-              </th>
-              <th scope="col" class="px-6 py-3 font-light text-sm">
-                Descuento
-              </th>
-              <th scope="col" class="px-6 py-3 font-light text-sm">
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
-              <th scope="row" class="pl-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                1
-              </th>
-              <td class="pr-6 py-4">
-                <NuxtLink to="/p/a">
-                  <NuxtImg alt="product" width="100" height="100" src="/images/22.webp" />
-                </NuxtLink>
-              </td>
-              <td class="px-6 py-4">
-                <p class="mt-4">
-                  <NuxtLink class="text-xl" to="/p/a">
-                    Datos de comprador
-                  </NuxtLink>
-                </p>
-                <p>
-                  <NuxtLink class="text-sm" to="/p/a">
-                    9926-7
-                  </NuxtLink>
-                </p>
-              </td>
-              <td class="px-6 py-4">
-                <div class="text-sm text-gray-400 line-through">
-                  50$
-                </div>
-                <div class="text-xl font-bold text-primary">
-                  69$
-                </div>
-              </td>
-              <td class="px-6 py-4">
-                <div class="flex items-center space-x-3">
-                  <button @click="decrement" class="bg-gray-200 text-gray-800 px-2 rounded-md hover:bg-primary">
-                    -
-                  </button>
-                  <span class="text-lg">{{ quantity }}</span>
-                  <button @click="increment" class="bg-gray-200 text-gray-800 px-2 rounded-md hover:bg-primary">
-                    +
-                  </button>
-                </div>
-              </td>
-              <td class="px-6 py-4">
-                <div class="text-base text-gray-400 line-through">
-                  60$
-                </div>
-                <div class="text-2xl font-bold text-primary">
-                  85$
-                </div>
-              </td>
-              <td>
-                <Icon name="ion:ios-close-outline" class="cursor-pointer text-4xl text-gray-600 hover:bg-primary" />
-              </td>
-            </tr>
-            <tr>
-              <td class="px-6 py-4" colspan="5"></td>
-              <td class="px-6 py-4" colspan="2">60$</td>
-            </tr>
-            <tr class="bg-gray-100 border-t">
-              <td class="px-6 py-4 font-medium" colspan="5">Total de pedido:</td>
-              <td class="px-6 py-4" colspan="2">60$</td>
-            </tr>
-          </tbody>
-        </table>
+        <ProductTable :data="ProductList" />
       </div>
       <div>
         <div class="grid grid-cols-10 justify-center items-center lg:hidden">
@@ -118,7 +31,7 @@
             <Icon name="ion:ios-close-outline" class="cursor-pointer text-4xl text-gray-600" />
           </div>
         </div>
-        <div >
+        <div class="pt-3" >
           <div class="grid grid-cols-3 lg:hidden pb-2 justify-center items-center">
             <div class="grid justify-center items-center border-r border-dashed">
               <span class="">Price :</span>
@@ -132,14 +45,9 @@
               </div>
             </div>
             <div>
-              <div class="flex justify-center items-center">
-                <button @click="decrement" class="bg-gray-200 text-gray-800 px-4 py-2 hover:bg-primary">
-                  -
-                </button>
-                <button class="border px-4 py-2 bg-gray-100">{{ quantity }}</button>
-                <button @click="increment" class="bg-gray-200 text-gray-800 px-4 py-2 hover:bg-primary">
-                  +
-                </button>
+              <div class="text-center">Cantidal:</div>
+              <div class="flex justify-center items-center text-3xl">
+                1
               </div>
             </div>
             <div class="grid justify-center items-center border-l border-dashed">
@@ -168,22 +76,196 @@
           <p class="text-xl">28,39 $</p>
         </div>
       </div>
+      <div class="step-name relative flex justify-center items-center my-8">
+        <span class="text-4xl bg-white px-8">Cesta</span>
+      </div>
+      <div class="text-center lg:py-8">
+        Península
+      </div>
+      <div class="step-name relative flex justify-center items-center my-8">
+        <span class="text-4xl bg-white px-8">Modo de pago y entrega
+        </span>
+      </div>
+      <div class="lg:py-8 lg:px-6">
+        <div class="lg:grid grid-cols-12 hidden">
+          <div class="col-span-2 px-6">
+            <div class="font-medium pb-5">
+              Modo de entrega
+            </div>
+            <div class="font-medium">
+              Modo de entrega
+            </div>
+          </div>
+          <div class="col-span-8">
+            <div class="pb-5">Correos</div>
+            <div>pago con tarjeta</div>
+          </div>
+          <div class="col-span-2">
+            <div class="text-center">
+              4,90 €
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="font-medium py-1">
+            Modo de entrega
+          </div>
+          <div class="flex justify-between py-1">
+            <span>Correos</span>  
+            <span>4,90$</span>  
+          </div>
+          <div class="font-medium py-1">
+            Modo de entrega
+          </div>
+          <div class="flex justify-between py-1">
+            <span>Correos</span>  
+          </div>
+        </div>
+        <div class="bg-gray-100 py-4 mt-10 flex lg:justify-end justify-center items-center pr-6">
+          <div class="text-xl uppercase">
+            Total: <span class="text-primary text-3xl">9,30€</span>
+          </div>
+        </div>
+        <div class="step-name relative flex justify-center items-center my-8">
+          <span class="text-4xl bg-white px-8">Datos para pedido
+          </span>
+        </div>
+        <div class="border bg-gray-100">
+          <div class="py-2 lg:px-16 px-6">
+            <div class="text-center py-3">Cliente
+            </div>
+            <hr>
+            <div class="py-4">
+              <div v-for="(item, index) in infoList" :key="index" class="grid grid-cols-2 py-1">
+                <div class="font-semibold">
+                  {{ item.key }}
+                </div>
+                <div>
+                  {{ item.value }}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="my-6">
+          <div class="py-1 flex gap-4">
+            <label class="cursor-pointer">
+              <input type="checkbox" class="hidden peer" />
+              <div
+                class="w-6 h-6 border border-gray-300 rounded-sm transition-all duration-300 peer-checked:bg-primary flex items-center justify-center">
+                <svg class="w-4 h-4 text-white opacity-0 transition-opacity duration-300 peer-checked:opacity-100"
+                  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M5 12l5 5L20 7"></path>
+                </svg>
+              </div>
+            </label>
+            <div>
+              <p class="pb-2 text-sm">
+                Marca todos consentimientos.</p>
+            </div>
+          </div>
+          <div class="py-1 flex gap-4">
+            <label class="cursor-pointer">
+              <input type="checkbox" class="hidden peer" />
+              <div
+                class="w-6 h-6 border border-gray-300 rounded-sm transition-all duration-300 peer-checked:bg-primary flex items-center justify-center">
+                <svg class="w-4 h-4 text-white opacity-0 transition-opacity duration-300 peer-checked:opacity-100"
+                  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M5 12l5 5L20 7"></path>
+                </svg>
+              </div>
+            </label>
+            <div>
+              <p class="pb-2 text-sm">
+                Declaro que he consultado el contenido de Reglamento *</p>
+            </div>
+          </div>
+          <div class="py-1 flex gap-4">
+            <label class="cursor-pointer">
+              <input type="checkbox" class="hidden peer" />
+              <div
+                class="w-6 h-6 border border-gray-300 rounded-sm transition-all duration-300 peer-checked:bg-primary flex items-center justify-center">
+                <svg class="w-4 h-4 text-white opacity-0 transition-opacity duration-300 peer-checked:opacity-100"
+                  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M5 12l5 5L20 7"></path>
+                </svg>
+              </div>
+            </label>
+            <div>
+              <p class="pb-2 text-sm">
+                Doy mi consentimiento para enviar por Cosmo Group Sp. z o.o. a la dirección de correo electrónico
+                proporcionada, mensajes comerciales, incluido un boletín informativo, que contiene información sobre
+                productos y servicios ofrecidos por
+                El consentimiento precitado es completamente voluntario y al expresarlo, confirmas que has consultado la
+                Política de privacidad y aceptas que tus datos personales sean procesados por Cosmo Group Sp. z o.o.
+                según los términos establecidos en la Política de privacidad. Puedes retirar tu consentimiento en
+                cualquier momento haciendo clic en el enlace contenido en los mensajes comerciales enviados.</p>
+            </div>
+          </div>
+          <div class="text-sm">
+            <span class="text-primary">*</span> - campos obligatorios
+          </div>
+        </div>
+        <div class="flex justify-between items-center mt-10">
+                <div class="">
+                    <NuxtLink to="/order/info"
+                        class="border text-xl border-gray-400 mr-2 text-black bg-white px-5 py-3 transition duration-300 hover:border-primary hover:text-primary">
+                        Atrás
+                        Cesta
+                    </NuxtLink>
+                </div>
+                <div class="">
+                    <NuxtLink to="/"
+                        class=" text-xl mr-2 text-white bg-primary px-5 py-3 transition duration-300 hover:bg-rose-300 ">
+                        Adelante
+                    </NuxtLink>
+                </div>
+            </div>
+      </div>
     </div>
   </div>
-  <div class="step-name relative flex justify-center items-center my-8">
-    <span class="text-4xl bg-white px-8">Cesta</span>
-  </div>
-  <div class="text-center py-8">
-    Península
-  </div>
-  <div class="step-name relative flex justify-center items-center my-8">
-    <span class="text-4xl bg-white px-8">Modo de pago y entrega
-    </span>
-  </div>
+
 </template>
 
 <script setup>
-import { ref, onMounted, onBeforeUnmount } from 'vue';
+
+const infoList = [
+  {
+    key: 'Nombre:',
+    value: '0569081963',
+  },
+  {
+    key: 'Apellido:',
+    value: 'cu',
+  },
+  {
+    key: 'Código postal:',
+    value: '00000',
+  },
+]
+const ProductList = [
+    {
+        id: 0,
+        image: '/images/22.webp',
+        name: 'Datos de comprador',
+        quanlity: 3,
+        code: '9926-7',
+        oldPrice: 70,
+        newPrice: 60,
+    },
+    {
+        id: 1,
+        image: '/images/22.webp',
+        name: 'Datos de comprador',
+        quanlity: 2,
+        code: '9926-7',
+        oldPrice: 70,
+        newPrice: 60,
+    },
+]
 
 const isDropdownOpen = ref(true);
 const quantity = ref(1);

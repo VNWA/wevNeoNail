@@ -26,7 +26,7 @@
         </div>
       </div>
     </div>
-    <header style="height: 160px;" class="sticky top-0 left-0 z-40">
+    <header class="sticky top-0 left-0 z-40">
       <div class="header">
         <div class="grid grid-cols-2 py-4 text-center container lg:mx-auto justify-center items-center">
           <!-- Logo Section -->
@@ -180,7 +180,7 @@
                 </div>
               </li>
               <li class="mx-12 py-4 font-medium"> <span class="pb-4">
-                  <NuxtLink to="/about" class="under-line">APRENDE CON NOSOTROS</NuxtLink>
+                  <NuxtLink to="/sp/a" class="under-line">APRENDE CON NOSOTROS</NuxtLink>
                 </span>
                 <div class="nav-dropdown absolute  bg-white ">
                   <div class="container mx-auto py-5">

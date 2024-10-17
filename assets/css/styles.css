@@ -5,8 +5,7 @@
 }
 
 .header {
-  max-height: 195px;
-
+  height: 160px;
   width: 100%;
   /* Đảm bảo header chiếm toàn bộ chiều ngang của trang */
   z-index: 1000;
@@ -125,7 +124,8 @@ a {
 .search-menu_desktop.active {
   display: block;
 }
-.menu-cart{
+
+.menu-cart {
   position: fixed;
   right: 0;
   top: 0;
@@ -136,14 +136,26 @@ a {
   transition: transform 0.4s ease-in-out;
   z-index: 40;
 }
-.menu-cart.active{
+
+.menu-cart.active {
   transform: translateX(100%);
 }
+
 @media screen and (max-width: 768px) {
   * {
     font-size: 12px;
   }
-
+  .header {
+    height: 75px;
+    width: 100%;
+    /* Đảm bảo header chiếm toàn bộ chiều ngang của trang */
+    z-index: 1000;
+    /* Đảm bảo header luôn nằm trên các phần tử khác */
+    background-color: white;
+    /* Màu nền header để không bị trong suốt */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* Thêm bóng để header nổi bật */
+  }
   .container {
     padding-right: 10px;
     padding-left: 10px;
@@ -175,6 +187,7 @@ a {
     /* Hiệu ứng chuyển động mượt mà */
     z-index: 49;
   }
+
   /* Khi menu được kích hoạt (hiển thị) */
   .nav-menu.active {
     transform: translateX(0);
@@ -196,6 +209,7 @@ a {
     font-size: 18px;
     transition: color 0.3s;
   }
+
   /* Hamburger Menu Icon Styles */
   .menu-icon {
     display: flex;
@@ -207,7 +221,8 @@ a {
     position: relative;
     margin: 0 15px;
   }
-  .menu-cart{
+
+  .menu-cart {
     position: fixed;
     right: 0;
     top: 0;
@@ -218,9 +233,11 @@ a {
     transition: transform 0.4s ease-in-out;
     z-index: 40;
   }
-  .menu-cart.active{
+
+  .menu-cart.active {
     transform: translateX(100%);
   }
+
   .menu-icon .bar {
     width: 100%;
     height: 4px;

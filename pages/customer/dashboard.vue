@@ -13,37 +13,31 @@
               <div class="grid grid-cols-2 gap-8">
                 <div>
                   <label for="nombre" class="text-sm">Nombre <span class="text-primary">*</span></label>
-                  <input id="nombre" type="text"
-                    class="pl-3 border focus:border-gray-400 focus:outline-none w-full py-3" required />
+                  <TextInput />
                 </div>
                 <div>
                   <label for="apellido" class="text-sm">Apellido <span class="text-primary">*</span></label>
-                  <input id="apellido" type="text"
-                    class="pl-3 border focus:border-gray-400 focus:outline-none w-full py-3" required />
+                  <TextInput />
                 </div>
               </div>
               <div class="grid grid-cols-2 gap-8 my-2">
                 <div>
                   <label for="empresa" class="text-sm">Empresa <span class="text-primary">*</span></label>
-                  <input id="empresa" type="text"
-                    class="pl-3 border focus:border-gray-400 focus:outline-none w-full py-3" required />
+                  <TextInput />
                 </div>
                 <div>
                   <label for="codigoPostal" class="text-sm">Código postal <span class="text-primary">*</span></label>
-                  <input id="codigoPostal" type="text"
-                    class="pl-3 border focus:border-gray-400 focus:outline-none w-full py-3" required />
+                  <TextInput />
                 </div>
               </div>
               <div class="grid grid-cols-2 gap-8 my-2">
                 <div>
-                  <label for="calle" class="text-sm">Calle <span class="text-primary">*</span></label>
-                  <input id="calle" type="text" class="pl-3 border focus:border-gray-400 focus:outline-none w-full py-3"
-                    required />
+                  <label for="Calle " class="text-sm">Calle  <span class="text-primary">*</span></label>
+                    <TextInput />
                 </div>
                 <div>
                   <label for="numeroCasa" class="text-sm">Número de casa <span class="text-primary">*</span></label>
-                  <input id="numeroCasa" type="text"
-                    class="pl-3 border focus:border-gray-400 focus:outline-none w-full py-3" required />
+                  <TextInput />
                 </div>
               </div>
               <div class="grid grid-cols-2 gap-8">
@@ -80,20 +74,17 @@
               <div class="grid grid-cols-2 gap-8 my-2">
                 <div>
                   <label for="ciudad" class="text-sm">Ciudad <span class="text-primary">*</span></label>
-                  <input id="ciudad" type="text"
-                    class="pl-3 border focus:border-gray-400 focus:outline-none w-full py-3" required />
+                  <TextInput />
                 </div>
                 <div>
                   <label for="telefono" class="text-sm">Teléfono<span class="text-primary">*</span></label>
-                  <input id="telefono" type="text"
-                    class="pl-3 border focus:border-gray-400 focus:outline-none w-full py-3" required />
+                  <TextInput />
                 </div>
               </div>
               <div class="grid grid-cols-2 gap-8 my-2">
                 <div>
                   <label for="email" class="text-sm">E-mail <span class="text-primary">*</span></label>
-                  <input id="email" type="email"
-                    class="pl-3 border focus:border-gray-400 focus:outline-none w-full py-3" required />
+                  <TextInput />
                 </div>
                 <div></div>
               </div>
@@ -121,22 +112,14 @@
                 </div>
               </div>
               <div class="my-4">
-                  <div class="py-2">
-                    <label for="">Dirección de envío
-                    </label>
-                    <Select />
-                  </div>
-                  <div class="py-2">
-                    <label for="">Dirección de envío
-                    </label>
-                    <Select />
-                  </div>
+                <label for="">Dirección de envío
+                </label>
+                <Select />
               </div>
               <div class="my-2 flex justify-end">
                 <button type="submit" class="bg-primary text-white py-4 px-3 hover:bg-rose-300 duration-300">Guardar
                   cambios</button>
               </div>
-
             </form>
           </div>
         </div>

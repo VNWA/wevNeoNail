@@ -159,8 +159,8 @@
   </div>
 </template>
 
-<script>
-import { onMounted, onBeforeUnmount, ref } from 'vue';
+<script setup>
+import { ref, onMounted, onBeforeUnmount } from 'vue';
 import { Swiper, SwiperSlide } from 'swiper/vue';
 import 'swiper/css';
 import 'swiper/css/free-mode';
@@ -168,104 +168,78 @@ import 'swiper/css/navigation';
 import 'swiper/css/thumbs';
 import { FreeMode, Navigation, Pagination, Thumbs } from 'swiper/modules';
 
-export default {
-  components: {
-    Swiper,
-    SwiperSlide,
-  },
-  setup() {
-    const isDropdownOpen = ref(false);
-    const currentDropdown = ref(null); // Thêm biến để theo dõi dropdown nào đang mở
+const isDropdownOpen = ref(false);
+const currentDropdown = ref(null);
 
-    const toggleDropdown = (dropdownNumber) => {
-      if (currentDropdown.value === dropdownNumber) {
-        isDropdownOpen.value = !isDropdownOpen.value; // Đổi trạng thái
-      } else {
-        isDropdownOpen.value = true; // Mở dropdown mới
-        currentDropdown.value = dropdownNumber; // Cập nhật dropdown hiện tại
-      }
-    };
+const toggleDropdown = (dropdownNumber) => {
+  if (currentDropdown.value === dropdownNumber) {
+    isDropdownOpen.value = !isDropdownOpen.value;
+  } else {
+    isDropdownOpen.value = true;
+    currentDropdown.value = dropdownNumber;
+  }
+};
 
-    const handleClickOutside = (event) => {
-      const dropdownElements = document.querySelectorAll('.dropdown');
-      const isClickOutside = Array.from(dropdownElements).every(
-        (dropdownElement) => !dropdownElement.contains(event.target)
-      );
-      if (isClickOutside) {
-        isDropdownOpen.value = false;
-        currentDropdown.value = null; // Đặt lại dropdown hiện tại
-      }
-    };
+const handleClickOutside = (event) => {
+  const dropdownElements = document.querySelectorAll('.dropdown');
+  const isClickOutside = Array.from(dropdownElements).every(
+    (dropdownElement) => !dropdownElement.contains(event.target)
+  );
+  if (isClickOutside) {
+    isDropdownOpen.value = false;
+    currentDropdown.value = null;
+  }
+};
 
-    onMounted(() => {
-      document.addEventListener('click', handleClickOutside);
-    });
+onMounted(() => {
+  document.addEventListener('click', handleClickOutside);
+});
 
-    onBeforeUnmount(() => {
-      document.removeEventListener('click', handleClickOutside);
-    });
+onBeforeUnmount(() => {
+  document.removeEventListener('click', handleClickOutside);
+});
 
-    const thumbsSwiper = ref(null);
-    const setThumbsSwiper = (swiper) => {
-      thumbsSwiper.value = swiper;
-    };
+const thumbsSwiper = ref(null);
+const setThumbsSwiper = (swiper) => {
+  thumbsSwiper.value = swiper;
+};
 
-    const modules = [FreeMode, Navigation, Thumbs, Pagination];
+const modules = [FreeMode, Navigation, Thumbs, Pagination];
 
-    // Images for the main swiper
-    const mainImages = [
-      '/images/0esmalte-semipermanente-72-ml-charca-de-rana (1).webp',
-      '/images/0esmalte-semipermanente-72-ml-charca-de-rana (1).webp',
-      '/images/0esmalte-semipermanente-72-ml-charca-de-rana (1).webp',
-      '/images/0esmalte-semipermanente-72-ml-charca-de-rana (1).webp',
-      '/images/0esmalte-semipermanente-72-ml-charca-de-rana (1).webp',
-      // Add more image URLs as needed
-    ];
+const mainImages = [
+  '/images/0esmalte-semipermanente-72-ml-charca-de-rana (1).webp',
+  '/images/0esmalte-semipermanente-72-ml-charca-de-rana (1).webp',
+  '/images/0esmalte-semipermanente-72-ml-charca-de-rana (1).webp',
+  '/images/0esmalte-semipermanente-72-ml-charca-de-rana (1).webp',
+  '/images/0esmalte-semipermanente-72-ml-charca-de-rana (1).webp',
+];
 
-    // Images for the thumbnail swiper
-    const thumbnailImages = [
-      '/images/0esmalte-semipermanente-72-ml-charca-de-rana (1).webp',
-      '/images/0esmalte-semipermanente-72-ml-charca-de-rana (1).webp',
-      '/images/0esmalte-semipermanente-72-ml-charca-de-rana (1).webp',
-      '/images/0esmalte-semipermanente-72-ml-charca-de-rana (1).webp',
-      '/images/0esmalte-semipermanente-72-ml-charca-de-rana (1).webp',
-      '/images/0esmalte-semipermanente-72-ml-charca-de-rana (1).webp',
-      // Add more image URLs as needed
-    ];
+const thumbnailImages = [
+  '/images/0esmalte-semipermanente-72-ml-charca-de-rana (1).webp',
+  '/images/0esmalte-semipermanente-72-ml-charca-de-rana (1).webp',
+  '/images/0esmalte-semipermanente-72-ml-charca-de-rana (1).webp',
+  '/images/0esmalte-semipermanente-72-ml-charca-de-rana (1).webp',
+  '/images/0esmalte-semipermanente-72-ml-charca-de-rana (1).webp',
+  '/images/0esmalte-semipermanente-72-ml-charca-de-rana (1).webp',
+];
 
-    return {
-      thumbsSwiper,
-      setThumbsSwiper,
-      modules,
-      mainImages,
-      thumbnailImages,
-      isDropdownOpen,
-      currentDropdown,
-      toggleDropdown,
-    };
-  },
-  data() {
-    return {
-      quantity: 1,
-      currentTab: 0,
-      tabs: [
-        { name: 'Descripción 1', content: 'Contenido 1...' },
-        { name: 'Descripción 2', content: 'Contenido 2...' },
-        { name: 'Descripción 3', content: 'Contenido 3...' },
-        { name: 'Descripción 4', content: 'Contenido 4...' },
-      ],
-    };
-  },
-  methods: {
-    increment() {
-      this.quantity++;
-    },
-    decrement() {
-      if (this.quantity > 1) {
-        this.quantity--;
-      }
-    },
-  },
+const quantity = ref(1);
+const currentTab = ref(0);
+const tabs = [
+  { name: 'Descripción 1', content: 'Contenido 1...' },
+  { name: 'Descripción 2', content: 'Contenido 2...' },
+  { name: 'Descripción 3', content: 'Contenido 3...' },
+  { name: 'Descripción 4', content: 'Contenido 4...' },
+];
+
+const increment = () => {
+  quantity.value++;
+};
+
+const decrement = () => {
+  if (quantity.value > 1) {
+    quantity.value--;
+  }
 };
 </script>
 
