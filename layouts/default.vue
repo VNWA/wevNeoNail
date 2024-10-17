@@ -24,14 +24,13 @@
             Gift ideas
           </NuxtLink>
         </div>
-
       </div>
     </div>
-    <header class="sticky top-0 left-0 z-40">
+    <header style="height: 160px;" class="sticky top-0 left-0 z-40">
       <div class="header">
         <div class="grid grid-cols-2 py-4 text-center container lg:mx-auto justify-center items-center">
           <!-- Logo Section -->
-          <div class=" flex justify-center items-center w-full lg:w-3/4">
+          <div class=" flex justify-start items-center w-full lg:w-3/4">
             <NuxtLink to="/">
               <NuxtImg alt="logo" width="260px" height="64px" class="bg-black" src="/images/logo.webp" />
             </NuxtLink>
@@ -67,7 +66,9 @@
               </button>
             </div>
             <div class="lg:flex items-center space-x-6 lg:ml-5 ml-20 hidden">
-              <Icon name="ph:user-light" class="hover:opacity-70 w-6 h-6 cursor-pointer" />
+              <NuxtLink to="/login">
+                <Icon name="ph:user-light" class="hover:opacity-70 w-6 h-6 cursor-pointer" />
+              </NuxtLink>
               <NuxtLink class="relative" to="/favourite">
                 <Icon class="hover:opacity-70 w-7 h-7 cursor-pointer hidden lg:block "
                   name="material-symbols-light:favorite-outline" />
@@ -341,11 +342,12 @@
           </div>
         </div>
         <div class="text-right lg:text-base text-2xl">
-          Tổng cộng: <b class="lg:text-2xl text-3xl ">6999$</b>
+          Tổng cộng: <b class="lg:text-2xl text-3xl ">7999$</b>
         </div>
         <div>
-          <NuxtLink to="/cart"
-            class="w-full block text-center border-black py-3 text-white bg-black text-lg mt-3 font-medium hover:bg-white hover:text-black border-solid border duration-500">XEM
+          <NuxtLink to="/order/cart"
+            class="w-full block text-center border-black py-3 text-white bg-black text-lg mt-3 font-medium hover:bg-white hover:text-black border-solid border duration-500">
+            XEM
             GIỎ HÀNG</NuxtLink>
         </div>
       </div>
@@ -443,12 +445,16 @@
 
     <!-- Footer Section -->
     <footer>
-      <Footer />
+      <AppFooter />
     </footer>
   </div>
 </template>
-
 <script lang="ts" setup>
+import { ref } from 'vue';
+import '@/assets/css/reset.css';
+import '@/assets/css/styles.css';
+import '@/assets/css/stylesheet.css';
+import Footer from '~/components/AppFooter.vue';
 
 // Sử dụng ref để quản lý số lượng
 const quantity = ref(1);
@@ -464,7 +470,6 @@ const decrement = () => {
     quantity.value--;
   }
 };
-// Import cần thiết từ Vue
 
 // Định nghĩa kiểu dữ liệu cho các item và submenu
 interface MenuItem {
@@ -473,7 +478,7 @@ interface MenuItem {
 }
 
 // Khai báo biến và kiểu dữ liệu
-const selectedMenu = ref<number | null>(null)
+const selectedMenu = ref<number | null>(null);
 
 // Dữ liệu menu với kiểu MenuItem[]
 const menuItems: MenuItem[] = [
@@ -501,65 +506,59 @@ const menuItems: MenuItem[] = [
     name: 'Learn With Us',
     submenu: ['Lesson 1', 'Lesson 2']
   }
-]
+];
 
 // Hàm toggleMenu để thay đổi selectedMenu
 const toggleMenu = (index: number) => {
-  selectedMenu.value = selectedMenu.value === index ? null : index
-}
-
-import { ref } from 'vue'
+  selectedMenu.value = selectedMenu.value === index ? null : index;
+};
 
 // Tạo trạng thái phản ứng để theo dõi việc mở/đóng menu
-const isMenuOpen = ref(false)
-const isSearchOpen = ref(false)
-const isCartOpen = ref(true)
-// Hàm để bật/tắt trạng thái menu
+const isMenuOpen = ref(false);
+const isSearchOpen = ref(false);
+const isCartOpen = ref(true);
 
-import '@/assets/css/reset.css'
-import '@/assets/css/styles.css'
-import '@/assets/css/stylesheet.css'
-import Footer from '~/components/Footer.vue';
+// Dữ liệu cho danh mục dropdown
 const CateDropdown = [
   {
     name: 'Nail Polishes',
-    subCategories: ['Transfer Papers',
+    subCategories: [
+      'Transfer Papers',
       'Transfer Papers',
       'Semi-permanent Tops',
       'Paint Gel',
-      'Vegan Classic Nail Polishes',
+      'Vegan Classic Nail Polishes'
     ]
   },
   {
     name: 'Gels and Acrylics',
-    subCategories: ['Transfer Papers',
+    subCategories: [
+      'Transfer Papers',
       'Simple Xpress 3in1',
       'Transfer Gel',
       'Transfer Papers',
-      'Transfer Papers',
+      'Transfer Papers'
     ]
   },
   {
     name: 'Nail Art',
-    subCategories: ['Transfer Papers',
+    subCategories: [
       'Transfer Papers',
       'Transfer Papers',
       'Transfer Papers',
       'Transfer Papers',
+      'Transfer Papers'
     ]
   },
-
   {
     name: 'Nail Polishes',
-    subCategories: ['Transfer Papers',
+    subCategories: [
+      'Transfer Papers',
       'Transfer Papers',
       'Semi-permanent Tops',
       'Paint Gel',
-      'Vegan Classic Nail Polishes',
+      'Vegan Classic Nail Polishes'
     ]
-  },
-
-]
-
-
+  }
+];
 </script>

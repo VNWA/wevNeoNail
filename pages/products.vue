@@ -61,7 +61,7 @@
         </div>
       </div>
     </div>
-    <div class="my-2 lg:grid grid-cols-2 justify-between items-center">
+    <div class="my-2 lg:grid grid-cols-2 justify-between items-center left-0 sticky top-[159px] bg-white z-40">
       <div class="lg:flex">
         <span class="uppercase text-2xl lg:text-lg font-medium lg:flex justify-center items-center">Tono:</span>
         <div class="hidden lg:block">
@@ -75,7 +75,7 @@
           <div class="border rounded-full w-14 h-14 bg-orange-600 flex-shrink-0"></div>
         </div>
       </div>
-      <div class="text-right hidden lg:flex justify-end">Z
+      <div class="text-right hidden lg:flex justify-end">
         <div class="flex justify-center items-center uppercase">
           <NuxtLink class="block mx-2" to="/">
             <div class="flex justify-center items-center">
@@ -136,9 +136,6 @@
 </template>
 
 <script lang="ts" setup>
-import ProductItem from '~/components/ProductItem.vue';
-
-
   const ProductList = [
     {
       image: [
